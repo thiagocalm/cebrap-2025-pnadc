@@ -1,0 +1,320 @@
+---
+title: "Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)"
+subtitle: "<span style='font-size:1em;'> Aula 1 - Conceitos e aplicações da PNADC </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - PNADC"
+logo: "images/cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: template/cebrap2025.scss
+    math: mathjax
+    incremental: true
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    chalkboard: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    auto-stretch: true
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Antes de começar...
+
+lista de presença!
+
+![](images/attention.gif){.absolute bottom="10" right="50" width="240" height="240"}
+
+## Estrutura da aula {.theme-next}
+
+:::::: columns
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+:::: {.column width="70%"}
+::: {style="text-align: left;"}
+-   Introdução à PNADC
+
+-   Operacionalização da coleta da pesquisa
+
+-   Esquema e estratégia de divulgação
+
+:::
+::::
+::::::
+
+# Introdução à PNADC {.theme-first}
+
+::: {style="text-align: left;"}
+O que é essa pesquisa?
+:::
+
+## PNADC {.theme-subtopic .smaller}
+
+::::: columns
+:::: {.column width="30%"}
+::: nonincremental
+### Objetivo
+
+Acompanhar flutuações trimestrais e a evolução (no curto, médio e longo prazo) da força de trabalho, bem como de outras informações necessárias para o estudo do desenvolvimento socioeconômico no país.
+:::
+::::
+
+:::: {.column .fragment width="70%"}
+
+::::
+:::::
+
+## PNADC {.theme-subtopic .smaller}
+
+::::: columns
+:::: {.column width="30%"}
+::: nonincremental
+### Objetivo
+
+Acompanhar flutuações trimestrais e a evolução (no curto, médio e longo prazo) da força de trabalho, bem como de outras informações necessárias para o estudo do desenvolvimento socioeconômico no país.
+:::
+::::
+
+:::: {.column .fragment width="70%"}
+### Características
+
+- Está dentro de um conjunto de **pesquisas amostrais domiciliares** que ocorrem em todo o mundo.
+
+- Feita desde 2012.
+
+  - Testes começaram em 2009.
+  
+- É realizada em cerca de 3.500 municípios.
+
+- Cobre todo o território brasileiro^[**Exceto:** Aldeias indígenas, quartéis, bases militares, alojamentos, acampamentos, embarcações, penitenciárias, colônias penais, hospitais, etc.].
+
+- Foi criada para substituir outras duas pesquisas amostrais do IBGE: PNAD e PME.
+::::
+:::::
+
+## [SIPD - Sistema Integrado de Pesquisas Domiciliares]{.theme-subtopic}{.smaller}
+
+
+::::: columns
+::: {.column width="60%"}
+![](images/SIPD.png){.absolute bottom="30" left="0" width="600" height="500"}
+:::
+
+::: {.column width="40%"}
+A **PNADC** faz parte do SIPD.
+
+- Surgiu em 2007
+
+- Buscou integrar as distintas pesquisas domiciliares realizadas no IBGE em um sistema único, de forma que:
+
+  - Garantisse uma mesma metodologia de amostragem
+  
+  - Assegurasse um núcleo de quesitos que fossem coletados do mesmo modo
+
+  - Otimizasse os temas e objetivos de cada pesquisa amostral, para evitar sobreposição.
+  
+:::
+:::::
+
+## [SIPD - Sistema Integrado de Pesquisas Domiciliares]{.theme-subtopic}{.smaller}
+
+#### Dois pontos fundamentais do SIPD:
+
+1. Passou a tratar a PNAD Contínua como **a pesquisa** amostral domiciliar **regular** e que incorporasse outros temas tratados com amplitude temporal maior em outras pesquisas.
+
+2. A Amostra Mestra (AM)
+
+- É a fonte pela qual se constrói as subamostras das demais pesquisas do IBGE
+
+- Tem como base o(s) Censo(s) Demográfico(s)
+
+- Alguns exemplos do uso:
+
+  - **POF**: usa 40% das UPAs^[Falaremos disso em breve...] da AM.
+  
+  - **PNADC**: usa 100% das UPAs da AM
+  
+## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic}{.font-size-small}
+
+![](images/timeline.png){.absolute top="55" left="50" width="891" height="194"}
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+#### Diferenças fundamentais
+
+::::: columns
+::: {.column width="50%"}
+Representatividade geográfica da amostra
+
+- **PNAD (Antiga):** Brasil, Grandes Regiões, UF e 9 RMs
+
+- **PME:** 6 RMs.
+
+- **PNADC:** Brasil, Grandes Regiões, UF, RMs que contém capital, RIDE, capitais.
+:::
+
+::: {.column width="50%"}
+Periodicidade da divulgação
+
+- **PNAD (Antiga):** Anual
+
+- **PME:** Anual
+
+- **PNADC:** Mensal, Trimestral e Anual.
+:::
+:::::
+
+## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic}{.font-size-small}
+
+![](images/tabela_sc.png){.absolute top="55" left="50" width="760" height="350"}
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+Ela nos permite:
+
+- Acompanhar o mesmo domicílio ao longo de 5 trimestres/visitas
+
+- Garante uma maior precisão das suas estimativas
+
+- Permite uma maior desagregação espacial das informações
+
+- Incorporação de novos temas em uma mesma base
+
+# Operacionalização da coleta da pesquisa {.theme-first}
+
+::: {style="text-align: left;"}
+Construção da amostra
+:::
+
+## População e amostra {.theme-subtopic .smaller}
+
+Não somente relacionado ao desenho de coleta dos dados, mas todas as estatísticas que calculamos estão associadas a esses conceitos
+
+### População
+
+Um conjunto de elementos (animados ou inanimados) que compartilham de alguma característica definida e que seja relevante para o/a pesquisador/a ou pesquisa.
+
+### Amostra
+
+Um fragmento, parte, subconjunto da população estudada. É definida, em geral, através de critérios explícitos.
+
+![](images/pop-amostra.png){.absolute .r-stretch bottom="20" right="50" width="500" height="300"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Isso é tudo para hoje! {.theme-next}
+
+Para próxima aula:
+
+1.  Exercício sobre correlação espúria
+2.  Leitura de material para aula de hoje (caso não tenha lido)
+3.  Leitura de material para a aula seguinte (Ver ementa)
+
+## Isso é tudo para hoje! {.theme-next}
+
+Orientações sobre o exercício:
+
+-   Explore os dados contidos na pasta `pratica > dados_correlacao.csv`
+
+-   Plot um gráfico das duas variáveis disponíveis
+
+-   Analise a correlação de Pearson
+
+-   Apresente suas hipóteses sobre o que explica isso.
+
+#  {.cebrap-fim .smaller}
+
+![](images/cebrap50.png){.absolute top="-90" right="460" width="100" height="100"}
+
+:::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: right;"}
+**Presidência**
+
+**Diretoria Administrativa**
+
+**Diretoria Científica**
+
+**Coordenação de Seminários**
+
+**Coordenação de Cursos**
+:::
+::::
+
+::: {.column width="50%"}
+Adrian Gurza Lavalle
+
+Victor Callil
+
+Arilson Favareto
+
+Bianca Tavolari
+
+Monise Fernandes Picanço
+:::
+::::::
+
+::: {style="text-align: center;"}
+**Curso**
+
+Introdução à análise de regressão para pesquisas sociais
+
+**Ministrante**
+
+Thiago Cordeiro Almeida
+
+E-mail: [thiagocordalmeida\@gmail.com](thiagocordalmeida@gmail.com)
+
+Github: [\@thiagocalm](github.com/thiagocalm)
+:::
