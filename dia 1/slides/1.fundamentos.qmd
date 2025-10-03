@@ -189,7 +189,13 @@ Periodicidade da divulgação
 
 ## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic}{.font-size-small}
 
-![](images/tabela_sc.png){.absolute top="55" left="50" width="760" height="350"}
+![](images/tabela_sc.png){.absolute top="55" left="50" width=70% height=70%}
+<br>
+
+<br>
+
+<br>
+
 <br>
 
 <br>
@@ -228,50 +234,490 @@ Um fragmento, parte, subconjunto da população estudada. É definida, em geral,
 
 ![](images/pop-amostra.png){.absolute .r-stretch bottom="20" right="50" width="500" height="300"}
 
+## [Unidade de coleta e divulgação]{.theme-subtopic}{.smaller}
+
+<br>
+
+::::: columns
+::: {.column width="30%"}
+![](images/unidade_coleta.png){fig-align="center" width=80% height=90%}
+:::
+
+::: {.column width="70%"}
+- A amostra é calculada com base nos domicílios do Brasil.
+
+- Visita-se estes domicílios selecionados na amostra e, para cada um deles, preenche-se as informações em um tablet.
+
+- É coletada informações tanto a nível do domicílio, quanto a nível das pessoas (moradores).
+
+- Os dados são divulgados (apresentados quando os importamos) na unidade da pessoa.
+:::
+:::::
+
+## [Como é construída a amostra?]{.theme-subtopic}{.smaller}
+
+A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios, com estratificação geográfica:
+
+### Estágio 1
+
+Seleção das **Unidades Primárias de Amostragem (UPAs)**.
+
+# (Um breve parêntesis sobre as UPAs)
+
+## [UPA e o Censo 2022]{.theme-subtopic}{.smaller}
+
+::::: columns
+::: {.column width="30%"}
+De onde as UPAs vêm?
+
+- São calculadas com base na Amostra Mestra
+
+- São compostas por um ou mais setores censitários contíguos;
+
+:::
+
+::: {.column width="70%"}
+O que há de novo?
+
+- Novo critério para tamanho mínimo das UPAs: aumento do número de domicílios particulares permanentes ocupados (DPPOs) que as compõe.
+
+- Redefinição da estratificação para criação das UPAs^[Veremos daqui a pouco.]
+
+- **Isso entra em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
+:::
+:::::
+
+## [Como é construída a amostra?]{.theme-subtopic}{.smaller}
+
+A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios:
+
+### Estágio 1
+
+Seleção das **Unidades Primárias de Amostragem (UPAs)**.
 
 
+### Estágio 2
+
+Seleção dos domicílios
+
+## [Como é construída a amostra?]{.theme-subtopic}{.smaller}
+
+![](images/am_to_domicilio.png){fig-align="center" width=80% height=80%}
+
+## [Estagio 1: Seleção das UPAs]{.theme-subtopic}{.smaller}
+
+::::: columns
+::: {.column width="40%"}
+- Por divisão administrativa
+
+- Geográfica/espacial com base na renda média dos responsáveis.
+
+  - Renda média do responsável
+
+- Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas^[As **FCUs** também foi uma alteração fruto da mudança recente da AM.].
+
+- Estrato Estatístico: Renda total das pessoas responsáveis e quantidade de Domicílios Particulares e Permanentes Ocupados (DPPOs).
+
+:::
+
+::: {.column width="60%"}
+![](images/am_estratificacao.png){fig-align="right-bottom" width=120% height=120%}
+:::
+:::::
+
+## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}
+
+Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE.
+
+## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}{.smaller}
+
+Mudanças entre os censos:
+
+::::: columns
+::: {.column width="40%"}
+**Censo 2010**
+
+- O tamanho da amostra de domicílios em cada UPA foi fixado em 14.
+
+:::
+
+::: {.column width="60%"}
+**Censo 2022**
+
+- Critério para tamanho dos domicílios redefinido segundo situação:
+
+  - Rural: Mínimo de 60 DPPOs
+  
+  - Urbano + FCU: Mínimo de 90 DPPOs.
+  
+- Aumento reduz esgotamento das UPAs, aumenta precisão das estimativas e otimização dos gastos públicos.
+:::
+:::::
+
+# Operacionalização da coleta da pesquisa {.theme-first}
+
+::: {style="text-align: left;"}
+Esquema de rotação da amostra: 1-2(5)
+:::
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+Planejamento da coleta
+
+- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados^[Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.].
+
+O esquema
+
+- **1**: Uma visita em um mês;
+
+- **2**: Dois meses subsequentes sem visita;
+
+- **5**: Repete-se esse ciclo por 5 viistas.
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_detalhe.png){fig-align="center" width=120% height=120%}
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_desenho.png){fig-align="center" width=120% height=120%}
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_desenho_trim.png){fig-align="center" width=120% height=120%}
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_desenho_visita.png){fig-align="center" width=120% height=120%}
+
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_desenho_long.png){fig-align="center" width=120% height=120%}
 
 
+## [Esquema de rotação 1-2(5)]{.theme-subtopic}{.smaller}
+
+![](images/esquema_desenho_mes.png){fig-align="center" width=120% height=120%}
+
+# Pausa! {.theme-stop}
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+```
+:::
+
+# Esquemas e estratégias de divulgação {.theme-first}
+
+::: {style="text-align: left;"}
+Calendários, temas e formas de divulgação
+:::
+
+## [Previsões de datas de divulgação]{.theme-subtopic}{.smaller}
+
+![](images/divulgacao_calendario.png){fig-align="center" width=120% height=120%}
+
+## [Temas e tópicos presentes]{.theme-subtopic}{.smaller}
+
+![](images/topicos.png){fig-align="center" width=120% height=120%}
+
+## [Formas de divulgação da pesquisa]{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="30%"}
+### Painel interativo {style="text-align: center;"}
+
+![](images/divulgacao_painel_mini.png){fig-align="center" width=120% height=120%}
+:::
+
+::: {.column width="30%"}
+### SIDRA {style="text-align: center;"}
+
+![](images/divulgacao_sidra_mini.png){fig-align="center" width=120% height=120%}
+:::
+
+::: {.column width="30%"}
+### Microdados {style="text-align: center;"}
+
+![](images/divulgacao_micro_mini.png){fig-align="center" width=120% height=120%}
+
+:::
+::::::
+
+# [Painel interativo PNADC]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://painel.ibge.gov.br/pnadc/](https://painel.ibge.gov.br/pnadc/)
 
 
+![](images/divulgacao_painel_1.png){fig-align="center" width=120% height=120%}
+
+# [Painel interativo PNADC]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://painel.ibge.gov.br/pnadc/](https://painel.ibge.gov.br/pnadc/)
 
 
+![](images/divulgacao_painel_2.png){fig-align="center" width=120% height=120%}
+
+# [Painel interativo PNADC]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://painel.ibge.gov.br/pnadc/](https://painel.ibge.gov.br/pnadc/)
 
 
+![](images/divulgacao_painel_3.png){fig-align="center" width=120% height=120%}
+
+# [Painel interativo PNADC]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://painel.ibge.gov.br/pnadc/](https://painel.ibge.gov.br/pnadc/)
 
 
+![](images/divulgacao_painel_4.png){fig-align="center" width=120% height=120%}
+
+# [Painel interativo PNADC]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://painel.ibge.gov.br/pnadc/](https://painel.ibge.gov.br/pnadc/)
 
 
+![](images/divulgacao_painel_5.png){fig-align="center" width=120% height=120%}
+
+## Exercício! {.theme-next .smaller}
+
+:::::: columns
+::: {.column width="40%"}
+Faça um mapa com duas camadas para o ano mais recente disponível:
+
+1. Taxa de escolarização para crianças de 4 a 5 anos por estado (UF)
+
+2. Taxa de escolarização por grupo de idade (4 e 5 anos) - Municípios das capitais
 
 
+:::
+
+::: {.column width="60%"}
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/hands-on.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
+
+:::
+::::::
+
+## []{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="20%"}
+![](images/divulgacao_sidra_mini.png){fig-align="center" width=120% height=120%}
+:::
+
+::: {.column width="80%"}
+É um ótimo recurso para trabalharmos de forma mais genérica, rápida, sem precisar baixar os microdados (!)
+
+O SIDRA é importante para:
+
+- Validarmos ciclos de análises que estivermos construindo
+
+- Obter informações gerais rapidamente
+
+Nele, poderemos obter distintas informações:
+
+- Características gerais dos moradores ou domicílios
+
+- Educação
+
+- Características do mercado de trabalho
+
+- ...
+
+Limitação
+
+- Em geral, os cruzamentos disponíveis são muito limitados.
+:::
+::::::
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_1.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_2.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_3.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_4.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_5.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_6.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_7.png){fig-align="center" width=120% height=120%}
+
+## [Sistema do IBGE de Recuperação de Automática]{.theme-subtopic}{.smaller}
+
+Pode ser acessado via: [https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas](https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas)
+
+**Exemplo:** População residente por sexo, raça e regiões.
+
+![](images/divulgacao_sidra_8.png){fig-align="center" width=120% height=120%}
+
+## Exercício! {.theme-next .smaller}
+
+:::::: columns
+::: {.column width="40%"}
+Utilizando o SIDRA, responda:
+
+1. Qual é o principal motivo para as pessoas não terem viajado no Brasil em 2021? (8456)
+
+2. Qual o número total de viagens por motivos pessoais e profissionais, realizadas nos últimos 3 meses antes da pesquisa, em 2019, 2020 e 2021? E qual o número de viagens nas quais as pessoas passaram apenas 1 pernoite fora de casa? (7204 e 6414)
+
+3. Em 2021, qual a renda domiciliar per capita média em domicílios com acesso a televisão por assinatura no Centro-Oeste? E dos domicílios que da região Sul que não tem acesso á televisão por assinatura? (7280)
+
+4. Em 2021, qual a região metropolitana do país com mais proporção de pessoas com acesso à internet? E qual a RM com menor proporção? (7316)
+
+5. Faça um gráfico da taxa de analfabetismo das pessoas com 15 anos ou mais de idade em 2019, por grandes regiões. (7113)
 
 
+:::
 
+::: {.column width="60%"}
 
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/hands-on.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
 
+:::
+::::::
 
+## [Microdados]{.theme-subtopic}{.smaller}
 
+:::::: columns
+::: {.column width="20%"}
+![](images/divulgacao_micro_mini.png){fig-align="center" width=120% height=120%}
+:::
 
+::: {.column width="80%"}
+O microdado é a forma mais desagregada em que a pesquisa coletou dados.
+
+Potencialidades
+
+- Permite que façamos tudo o que o SIDRA não nos oferece
+
+- Realizar análises com variáveis que construamos;
+
+- Trabalhar com os mais diversos recortes que queiramos;
+
+- Fazer cálculo de indicadores.
+
+O acesso aos microdados da PNAD Contínua é público:
+
+- Diretamente via navegadores
+
+- Via R (Aula 2!)
+:::
+::::::
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_1.png){fig-align="center" width=120% height=120%}
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_2.png){fig-align="center" width=120% height=120%}
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_3.png){fig-align="center" width=120% height=120%}
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_4.png){fig-align="center" width=120% height=120%}
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_5.png){fig-align="center" width=120% height=120%}
+
+## [Microdados]{.theme-subtopic}{.smaller}
+
+Forma de acesso aos microdados via navegador.
+
+![](images/divulgacao_micro_6.png){fig-align="center" width=120% height=120%}
 
 ## Isso é tudo para hoje! {.theme-next}
 
 Para próxima aula:
 
-1.  Exercício sobre correlação espúria
-2.  Leitura de material para aula de hoje (caso não tenha lido)
-3.  Leitura de material para a aula seguinte (Ver ementa)
+1.  Exercícios sobre Painel Interativo e SIDRA
+2.  Exercício de **definição dos temas de interesse**
+3.  Leitura de material para aula de hoje (caso não tenha lido)
+4.  Leitura de material para a aula seguinte (Ver ementa)
 
-## Isso é tudo para hoje! {.theme-next}
+## Isso é tudo para hoje! {.theme-next .smaller}
 
-Orientações sobre o exercício:
+Orientações sobre o exercício: O que faremos com os dados suplementares da aula 3?
 
--   Explore os dados contidos na pasta `pratica > dados_correlacao.csv`
+1. Na pasta compartilhada da aula, buscar por variáveis e/ou temas da PNADC para ver temas que te interesse.
 
--   Plot um gráfico das duas variáveis disponíveis
+  - Arquivos de dicionário: Pasta “Dicionários PNADC”.
 
--   Analise a correlação de Pearson
+  - Arquivo dos suplementos e temas:  “IBGE - Pesquisas Suplementares Anuais.pdf"
 
--   Apresente suas hipóteses sobre o que explica isso.
+2. Abrir link da planilha compartilhada: Aba "Temas de interesse".
+
+3. Assinalar um tema de interesse
 
 #  {.cebrap-fim .smaller}
 
@@ -308,7 +754,7 @@ Monise Fernandes Picanço
 ::: {style="text-align: center;"}
 **Curso**
 
-Introdução à análise de regressão para pesquisas sociais
+Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)
 
 **Ministrante**
 

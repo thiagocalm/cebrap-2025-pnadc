@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Thiago Cordeiro Almeida">
-  <meta name="dcterms.date" content="2025-10-02">
+  <meta name="dcterms.date" content="2025-10-03">
   <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-ccd14544a745d942aa15172a93ac1f9d.css">
+  <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-47d0a96916a93018930b2003f16f50ee.css">
   <link href="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -144,7 +144,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">October 2, 2025</p>
+  <p class="date">October 3, 2025</p>
 </section>
 <section>
 <section id="antes-de-começar" class="title-slide slide level1 center">
@@ -269,7 +269,10 @@ Thiago Cordeiro Almeida
 </section>
 <section id="retrospectiva-da-pnad-e-pme-à-pnadc-1" class="slide level2 font-size-small">
 <h2><span class="theme-subtopic">Retrospectiva: da PNAD (e PME) à PNADC</span></h2>
-<p><img data-src="images/tabela_sc.png" class="absolute" style="top: 55px; left: 50px; width: 760px; height: 350px; "> <br></p>
+<p><img data-src="images/tabela_sc.png" class="absolute" style="top: 55px; left: 50px; width: 70%; height: 70%; "> <br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
 <p><br></p>
 <p><br></p>
 <p><br></p>
@@ -297,26 +300,537 @@ Thiago Cordeiro Almeida
 <p>Um fragmento, parte, subconjunto da população estudada. É definida, em geral, através de critérios explícitos.</p>
 <img data-src="images/pop-amostra.png" class="absolute r-stretch" style="bottom: 20px; right: 50px; width: 500px; height: 300px; ">
 </section>
+<section id="unidade-de-coleta-e-divulgação" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Unidade de coleta e divulgação</span></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/unidade_coleta.png" class="quarto-figure quarto-figure-center" style="width:80.0%;height:90.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:70%;">
+<ul>
+<li class="fragment"><p>A amostra é calculada com base nos domicílios do Brasil.</p></li>
+<li class="fragment"><p>Visita-se estes domicílios selecionados na amostra e, para cada um deles, preenche-se as informações em um tablet.</p></li>
+<li class="fragment"><p>É coletada informações tanto a nível do domicílio, quanto a nível das pessoas (moradores).</p></li>
+<li class="fragment"><p>Os dados são divulgados (apresentados quando os importamos) na unidade da pessoa.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="como-é-construída-a-amostra" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Como é construída a amostra?</span></h2>
+<p>A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios, com estratificação geográfica:</p>
+<h3 id="estágio-1">Estágio 1</h3>
+<p>Seleção das <strong>Unidades Primárias de Amostragem (UPAs)</strong>.</p>
+</section></section>
+<section>
+<section id="um-breve-parêntesis-sobre-as-upas" class="title-slide slide level1 center">
+<h1>(Um breve parêntesis sobre as UPAs)</h1>
+
+</section>
+<section id="upa-e-o-censo-2022" class="slide level2 smaller">
+<h2><span class="theme-subtopic">UPA e o Censo 2022</span></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>De onde as UPAs vêm?</p>
+<ul>
+<li class="fragment"><p>São calculadas com base na Amostra Mestra</p></li>
+<li class="fragment"><p>São compostas por um ou mais setores censitários contíguos;</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p>O que há de novo?</p>
+<ul>
+<li class="fragment"><p>Novo critério para tamanho mínimo das UPAs: aumento do número de domicílios particulares permanentes ocupados (DPPOs) que as compõe.</p></li>
+<li class="fragment"><p>Redefinição da estratificação para criação das UPAs<sup>1</sup></p></li>
+<li class="fragment"><p><strong>Isso entra em vigor a partir de 2025</strong>, finalizando a transição no terceiro trimestre de 2026.</p></li>
+</ul>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Veremos daqui a pouco.</p></li></ol></aside></section>
+<section id="como-é-construída-a-amostra-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Como é construída a amostra?</span></h2>
+<p>A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios:</p>
+<h3 id="estágio-1-1">Estágio 1</h3>
+<p>Seleção das <strong>Unidades Primárias de Amostragem (UPAs)</strong>.</p>
+<h3 id="estágio-2">Estágio 2</h3>
+<p>Seleção dos domicílios</p>
+</section>
+<section id="como-é-construída-a-amostra-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Como é construída a amostra?</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/am_to_domicilio.png" class="quarto-figure quarto-figure-center" style="width:80.0%;height:80.0%"></p>
+</figure>
+</div>
+</section>
+<section id="estagio-1-seleção-das-upas" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Estagio 1: Seleção das UPAs</span></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li class="fragment"><p>Por divisão administrativa</p></li>
+<li class="fragment"><p>Geográfica/espacial com base na renda média dos responsáveis.</p>
+<ul>
+<li class="fragment">Renda média do responsável</li>
+</ul></li>
+<li class="fragment"><p>Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas<sup>1</sup>.</p></li>
+<li class="fragment"><p>Estrato Estatístico: Renda total das pessoas responsáveis e quantidade de Domicílios Particulares e Permanentes Ocupados (DPPOs).</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right-bottom">
+<figure>
+<p><img data-src="images/am_estratificacao.png" class="quarto-figure quarto-figure-right-bottom" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>As <strong>FCUs</strong> também foi uma alteração fruto da mudança recente da AM.</p></li></ol></aside></section>
+<section id="estagio-2-seleção-dos-domicílios" class="slide level2">
+<h2><span class="theme-subtopic">Estagio 2: Seleção dos domicílios</span></h2>
+<p>Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE.</p>
+</section>
+<section id="estagio-2-seleção-dos-domicílios-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Estagio 2: Seleção dos domicílios</span></h2>
+<p>Mudanças entre os censos:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Censo 2010</strong></p>
+<ul>
+<li class="fragment">O tamanho da amostra de domicílios em cada UPA foi fixado em 14.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><strong>Censo 2022</strong></p>
+<ul>
+<li class="fragment"><p>Critério para tamanho dos domicílios redefinido segundo situação:</p>
+<ul>
+<li class="fragment"><p>Rural: Mínimo de 60 DPPOs</p></li>
+<li class="fragment"><p>Urbano + FCU: Mínimo de 90 DPPOs.</p></li>
+</ul></li>
+<li class="fragment"><p>Aumento reduz esgotamento das UPAs, aumenta precisão das estimativas e otimização dos gastos públicos.</p></li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="operacionalização-da-coleta-da-pesquisa-1" class="title-slide slide level1 theme-first center">
+<h1>Operacionalização da coleta da pesquisa</h1>
+<div style="text-align: left;">
+<p>Esquema de rotação da amostra: 1-2(5)</p>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<p>Planejamento da coleta</p>
+<ul>
+<li class="fragment">Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados<sup>1</sup>.</li>
+</ul>
+<p>O esquema</p>
+<ul>
+<li class="fragment"><p><strong>1</strong>: Uma visita em um mês;</p></li>
+<li class="fragment"><p><strong>2</strong>: Dois meses subsequentes sem visita;</p></li>
+<li class="fragment"><p><strong>5</strong>: Repete-se esse ciclo por 5 viistas.</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.</p></li></ol></aside></section>
+<section id="esquema-de-rotação-1-25-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_detalhe.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_desenho.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_desenho_trim.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25-4" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_desenho_visita.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25-5" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_desenho_long.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="esquema-de-rotação-1-25-6" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Esquema de rotação 1-2(5)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/esquema_desenho_mes.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section></section>
+<section id="pausa" class="title-slide slide level1 theme-stop center">
+<h1>Pausa!</h1>
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+<img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;">
+</div>
+</section>
+
+<section>
+<section id="esquemas-e-estratégias-de-divulgação" class="title-slide slide level1 theme-first center">
+<h1>Esquemas e estratégias de divulgação</h1>
+<div style="text-align: left;">
+<p>Calendários, temas e formas de divulgação</p>
+</div>
+</section>
+<section id="previsões-de-datas-de-divulgação" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Previsões de datas de divulgação</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_calendario.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="temas-e-tópicos-presentes" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Temas e tópicos presentes</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/topicos.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="formas-de-divulgação-da-pesquisa" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Formas de divulgação da pesquisa</span></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h3 style="text-align: center;" id="painel-interativo">Painel interativo</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_mini.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<h3 style="text-align: center;" id="sidra">SIDRA</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_mini.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<h3 style="text-align: center;" id="microdados">Microdados</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_mini.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section id="painel-interativo-pnadc" class="title-slide slide level1 smaller center">
+<h1><span class="theme-subtopic">Painel interativo PNADC</span></h1>
+<p>Pode ser acessado via: <a href="https://painel.ibge.gov.br/pnadc/">https://painel.ibge.gov.br/pnadc/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_1.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+
+<section id="painel-interativo-pnadc-1" class="title-slide slide level1 smaller center">
+<h1><span class="theme-subtopic">Painel interativo PNADC</span></h1>
+<p>Pode ser acessado via: <a href="https://painel.ibge.gov.br/pnadc/">https://painel.ibge.gov.br/pnadc/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_2.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+
+<section id="painel-interativo-pnadc-2" class="title-slide slide level1 smaller center">
+<h1><span class="theme-subtopic">Painel interativo PNADC</span></h1>
+<p>Pode ser acessado via: <a href="https://painel.ibge.gov.br/pnadc/">https://painel.ibge.gov.br/pnadc/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_3.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+
+<section id="painel-interativo-pnadc-3" class="title-slide slide level1 smaller center">
+<h1><span class="theme-subtopic">Painel interativo PNADC</span></h1>
+<p>Pode ser acessado via: <a href="https://painel.ibge.gov.br/pnadc/">https://painel.ibge.gov.br/pnadc/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_4.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+
+<section>
+<section id="painel-interativo-pnadc-4" class="title-slide slide level1 smaller center">
+<h1><span class="theme-subtopic">Painel interativo PNADC</span></h1>
+<p>Pode ser acessado via: <a href="https://painel.ibge.gov.br/pnadc/">https://painel.ibge.gov.br/pnadc/</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_painel_5.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exercício" class="slide level2 theme-next smaller">
+<h2>Exercício!</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Faça um mapa com duas camadas para o ano mais recente disponível:</p>
+<ol type="1">
+<li class="fragment"><p>Taxa de escolarização para crianças de 4 a 5 anos por estado (UF)</p></li>
+<li class="fragment"><p>Taxa de escolarização por grupo de idade (4 e 5 anos) - Municípios das capitais</p></li>
+</ol>
+</div><div class="column" style="width:60%;">
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
+</div>
+</div></div>
+</section>
+<section id="section" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_mini.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:80%;">
+<p>É um ótimo recurso para trabalharmos de forma mais genérica, rápida, sem precisar baixar os microdados (!)</p>
+<p>O SIDRA é importante para:</p>
+<ul>
+<li class="fragment"><p>Validarmos ciclos de análises que estivermos construindo</p></li>
+<li class="fragment"><p>Obter informações gerais rapidamente</p></li>
+</ul>
+<p>Nele, poderemos obter distintas informações:</p>
+<ul>
+<li class="fragment"><p>Características gerais dos moradores ou domicílios</p></li>
+<li class="fragment"><p>Educação</p></li>
+<li class="fragment"><p>Características do mercado de trabalho</p></li>
+<li class="fragment"><p>…</p></li>
+</ul>
+<p>Limitação</p>
+<ul>
+<li class="fragment">Em geral, os cruzamentos disponíveis são muito limitados.</li>
+</ul>
+</div></div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_1.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_2.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_3.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_4.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-4" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_5.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-5" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_6.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-6" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_7.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sistema-do-ibge-de-recuperação-de-automática-7" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Sistema do IBGE de Recuperação de Automática</span></h2>
+<p>Pode ser acessado via: <a href="https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas">https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas</a></p>
+<p><strong>Exemplo:</strong> População residente por sexo, raça e regiões.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_sidra_8.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="exercício-1" class="slide level2 theme-next smaller">
+<h2>Exercício!</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Utilizando o SIDRA, responda:</p>
+<ol type="1">
+<li class="fragment"><p>Qual é o principal motivo para as pessoas não terem viajado no Brasil em 2021? (8456)</p></li>
+<li class="fragment"><p>Qual o número total de viagens por motivos pessoais e profissionais, realizadas nos últimos 3 meses antes da pesquisa, em 2019, 2020 e 2021? E qual o número de viagens nas quais as pessoas passaram apenas 1 pernoite fora de casa? (7204 e 6414)</p></li>
+<li class="fragment"><p>Em 2021, qual a renda domiciliar per capita média em domicílios com acesso a televisão por assinatura no Centro-Oeste? E dos domicílios que da região Sul que não tem acesso á televisão por assinatura? (7280)</p></li>
+<li class="fragment"><p>Em 2021, qual a região metropolitana do país com mais proporção de pessoas com acesso à internet? E qual a RM com menor proporção? (7316)</p></li>
+<li class="fragment"><p>Faça um gráfico da taxa de analfabetismo das pessoas com 15 anos ou mais de idade em 2019, por grandes regiões. (7113)</p></li>
+</ol>
+</div><div class="column" style="width:60%;">
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
+</div>
+</div></div>
+</section>
+<section id="microdados-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_mini.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:80%;">
+<p>O microdado é a forma mais desagregada em que a pesquisa coletou dados.</p>
+<p>Potencialidades</p>
+<ul>
+<li class="fragment"><p>Permite que façamos tudo o que o SIDRA não nos oferece</p></li>
+<li class="fragment"><p>Realizar análises com variáveis que construamos;</p></li>
+<li class="fragment"><p>Trabalhar com os mais diversos recortes que queiramos;</p></li>
+<li class="fragment"><p>Fazer cálculo de indicadores.</p></li>
+</ul>
+<p>O acesso aos microdados da PNAD Contínua é público:</p>
+<ul>
+<li class="fragment"><p>Diretamente via navegadores</p></li>
+<li class="fragment"><p>Via R (Aula 2!)</p></li>
+</ul>
+</div></div>
+</section>
+<section id="microdados-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_1.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="microdados-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_2.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="microdados-4" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_3.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="microdados-5" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_4.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="microdados-6" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_5.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
+<section id="microdados-7" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Microdados</span></h2>
+<p>Forma de acesso aos microdados via navegador.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/divulgacao_micro_6.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+</section>
 <section id="isso-é-tudo-para-hoje" class="slide level2 theme-next">
 <h2>Isso é tudo para hoje!</h2>
 <p>Para próxima aula:</p>
 <ol type="1">
-<li class="fragment">Exercício sobre correlação espúria</li>
+<li class="fragment">Exercícios sobre Painel Interativo e SIDRA</li>
+<li class="fragment">Exercício de <strong>definição dos temas de interesse</strong></li>
 <li class="fragment">Leitura de material para aula de hoje (caso não tenha lido)</li>
 <li class="fragment">Leitura de material para a aula seguinte (Ver ementa)</li>
 </ol>
 </section>
-<section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next">
+<section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next smaller">
 <h2>Isso é tudo para hoje!</h2>
-<p>Orientações sobre o exercício:</p>
+<p>Orientações sobre o exercício: O que faremos com os dados suplementares da aula 3?</p>
+<ol type="1">
+<li class="fragment">Na pasta compartilhada da aula, buscar por variáveis e/ou temas da PNADC para ver temas que te interesse.</li>
+</ol>
 <ul>
-<li class="fragment"><p>Explore os dados contidos na pasta <code>pratica &gt; dados_correlacao.csv</code></p></li>
-<li class="fragment"><p>Plot um gráfico das duas variáveis disponíveis</p></li>
-<li class="fragment"><p>Analise a correlação de Pearson</p></li>
-<li class="fragment"><p>Apresente suas hipóteses sobre o que explica isso.</p></li>
+<li class="fragment"><p>Arquivos de dicionário: Pasta “Dicionários PNADC”.</p></li>
+<li class="fragment"><p>Arquivo dos suplementos e temas: “IBGE - Pesquisas Suplementares Anuais.pdf”</p></li>
 </ul>
+<ol start="2" type="1">
+<li class="fragment"><p>Abrir link da planilha compartilhada: Aba “Temas de interesse”.</p></li>
+<li class="fragment"><p>Assinalar um tema de interesse</p></li>
+</ol>
 </section></section>
-<section id="section" class="title-slide slide level1 cebrap-fim smaller center">
+<section id="section-1" class="title-slide slide level1 cebrap-fim smaller center">
 <h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
@@ -337,7 +851,7 @@ Thiago Cordeiro Almeida
 </div></div>
 <div style="text-align: center;">
 <p><strong>Curso</strong></p>
-<p>Introdução à análise de regressão para pesquisas sociais</p>
+<p>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</p>
 <p><strong>Ministrante</strong></p>
 <p>Thiago Cordeiro Almeida</p>
 <p>E-mail: <a href="thiagocordalmeida@gmail.com">thiagocordalmeida@gmail.com</a></p>
