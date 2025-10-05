@@ -1,0 +1,693 @@
+---
+title: "Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)"
+subtitle: "<span style='font-size:1em;'> Dia 4 - Análises em R </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - PNADC"
+logo: "images/cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: template/cebrap2025.scss
+    math: mathjax
+    incremental: true
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    chalkboard: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    auto-stretch: true
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Antes de começar...
+
+lista de presença!
+
+![](images/attention.gif){.absolute bottom="10" right="50" width="240" height="240"}
+
+# Antes de começar (2)...
+
+::: nonincremental
+-   Dúvidas gerais sobre a aula anterior?
+
+-   Exercício dos dias anteriores: dúvidas, comentários, considerações?
+
+![](images/question.gif){.absolute bottom="-150" right="0" width="200" height="200"}
+:::
+
+## Estrutura da aula {.theme-next}
+
+:::::: columns
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+:::: {.column width="70%"}
+::: {style="text-align: left;"}
+-   Tipos de Medida na PNADC
+
+-   Análise prática a partir de um caso recente
+
+-   Tópicos complementares
+
+-   Próximos passos
+:::
+::::
+::::::
+
+# Tipos de Medida na PNADC {.theme-first}
+
+::: {style="text-align: left;"}
+Análise de dados, pesquisa e R
+:::
+
+## [Análise de dados e pesquisa]{.theme-subtopic} {.smaller}
+
+::::: columns
+::: {.column width="20%"}
+Fluxo de análise de dados[^1] que, geralmente, seguimos:
+:::
+
+::: {.column width="80%"}
+![](images/ciclo_analise_1.png){fig-align="center" width="100%" height="100%"}
+:::
+:::::
+
+[^1]: Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.
+
+## [Natureza das variáveis]{.theme-subtopic}{.smaller}
+
+São categorizações excludentes, *todavia, uma variável pode ser transformada em outra natureza/tipo*.
+
+::::: columns
+::: {.column width="50%"}
+### Qualitativa {style="text-align: center;"}
+
+Valores apresentam atributos ou qualidades.
+
+-   **Nominal** (não ordenado) - pode ainda ser dividida em binária ou não.
+
+    -   Ex.: estados, sexo, nomes.
+
+-   **Ordinal** (ordenado)
+
+    -   Ex.: nível de escolaridade, [faixa de renda]{.fragment .highlight-red}, faixa de tamanho de cidade
+:::
+
+::: {.column width="50%"}
+### Quantitativa {style="text-align: center;"}
+
+Valores são expressos em números, apresentam quantidades.
+
+-   **Discreta** (contagem) - expressa em números inteiros.
+
+    -   Ex.: anos de estudos, número de irmãos, número de domicílios.
+
+-   **Contínua** (medidas) - expressa em números infinitesimais.
+
+    -   Ex.: Altura, peso, [renda]{.fragment .highlight-red}
+:::
+:::::
+
+## [Natureza das variáveis em R]{.theme-subtopic}{.smaller}
+:::::: nonincremental
+
+**Como verificar:** no R, podemos verificar o seu tipo/natureza usando  funções, como “class()” ou “str()”.
+
+::::: columns
+::: {.column width="50%"}
+### Qualitativa {style="text-align: center;"}
+
+Valores apresentam atributos ou qualidades.
+
+-   **Nominal** (não ordenado) - pode ainda ser dividida em binária ou não.
+
+    -   R: character / factor.
+
+-   **Ordinal** (ordenado)
+
+    -   R: factor
+:::
+
+::: {.column width="50%"}
+### Quantitativa {style="text-align: center;"}
+
+Valores são expressos em números, apresentam quantidades.
+
+-   **Discreta** (contagem) - expressa em números inteiros.
+
+    -   R: Integer.
+
+-   **Contínua** (medidas) - expressa em números infinitesimais.
+
+    -   R: double
+:::
+:::::
+
+::::::
+
+## [Tipos de medidas]{.theme-subtopic}{.smaller}
+
+Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.
+
+-   **Números absolutos**
+
+-   **Números relativos** (distribuição relativa; composição)
+
+-   **Proporção** (numerador está contido no denominador)
+
+-   **Taxa** (numerador **não** está contido no denominador)
+
+-   **Razão** (divisão de duas grandezas quaisquer)
+
+-   **Medidas de tendência central** (média, moda, mediana)
+
+-   **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação)
+
+## Tipos de análises {.theme-subtopic .smaller}
+
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.
+
+:::::: columns
+::: {.column width="30%"}
+### Univariada {style="text-align: center;"}
+
+Variável qualitativa (binária, ordinal)
+
+Variável quantitativa (contínua, discreta)
+:::
+
+::: {.column width="30%"}
+### Bivariada {style="text-align: center;"}
+
+Quali X Quanti
+
+Quali X Quali
+
+Quanti X Quanti
+:::
+
+::: {.column width="30%"}
+### Multivariada {style="text-align: center;"}
+
+Quali X Quali X Quali
+
+Quali X Quali X Quanti
+
+Quanti X Quanti X Quali
+
+Quanti X Quanti X Quati
+:::
+::::::
+
+## Tipos de análises {.theme-subtopic .smaller}
+
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.
+
+:::::: columns
+::: {.column width="30%"}
+### Univariada {style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width) +
+  geom_density(linewidth = 1.5) +
+  labs(x="",y="") +
+  theme_minimal()
+```
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  filter(Sepal.Width >= 3.2) |> 
+  mutate(value = 1) |>
+  summarise(n = sum(value), .by = Species) |> 
+  ggplot() +
+  aes(x = Species, y = n) +
+  geom_col() +
+  labs(x="",y="") +
+  theme_minimal() +
+  theme(axis.text = element_blank())
+```
+:::
+
+::: {.column width="30%"}
+### Bivariada {style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width, y = Sepal.Length) +
+  geom_point(size = 3) +
+  labs(x="",y="") +
+  theme_minimal()
+```
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  filter(Sepal.Width >= 3.2) |> 
+  mutate(value = 1, grande = ifelse(Sepal.Width >= 3.300, "Sim", "Não")) |>
+  summarise(n = sum(value), .by = c(Species, grande)) |> 
+  ggplot() +
+  aes(x = Species, y = n, fill = grande) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(x="",y="") +
+  scale_fill_viridis_d() +
+  theme_minimal() +
+  theme(axis.text = element_blank())
+```
+:::
+
+::: {.column width="30%"}
+### Multivariada {style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width, y = Sepal.Length, color = Species) +
+  geom_point(size = 3, show.legend = FALSE) +
+  labs(x="",y="") +
+  scale_color_viridis_d() +
+  theme_minimal()
+```
+:::
+::::::
+
+# Análise prática a partir de um caso recente {.theme-first}
+
+::: {style="text-align: left;"}
+Imposto de renda zero!
+:::
+
+## [O caso]{.theme-subtopic} {.smaller}
+
+A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+
+![](images/IRPFM_ideia.png){fig-align="center" width="100%" height="100%"}
+
+## [O caso]{.theme-subtopic}{.font-size-small}
+
+A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+
+:::::: columns
+:::: {.column width="70%"}
+::: nonincremental
+
+### Problemática
+Qual seria a parcela dos trabalhadores do estado que *potencialmente* seriam beneficiados com imposto zero?
+
+### Tarefas para responder à problemática
+
+1. Número de pessoas ocupadas no Brasil.
+
+2. Número de pessoas Ocupadas com potencialmente beneficiados.
+
+3. Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
+
+4. Renda média do grupo dos potencialmente beneficiados ou não.
+
+5. Proporção de potencialmente beneficiados por UF.
+:::
+::::
+
+::: {.column width="30%"}
+![](images/IRPFM_logo.png){fig-align="center" width="120%" height="120%"}
+:::
+::::::
+
+## [O caso]{.theme-subtopic}{.font-size-small}
+
+A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+
+:::::: columns
+:::: {.column width="70%"}
+::: nonincremental
+
+### Problemática
+Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* seriam **beneficiados com imposto zero**?
+
+### Tarefas para responder à problemática
+
+1. Número de pessoas ocupadas no Brasil.
+
+2. Número de pessoas Ocupadas com potencialmente beneficiados.
+
+3. Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
+
+4. Renda média do grupo dos potencialmente beneficiados ou não.
+
+5. Proporção de potencialmente beneficiados por UF.
+:::
+::::
+
+::: {.column width="30%"}
+![](images/IRPFM_logo.png){fig-align="center" width="120%" height="120%"}
+:::
+::::::
+
+## [O caso na PNADC]{.theme-subtopic}
+
+![](images/pratica_dados.png){fig-align="center" width="120%" height="120%"}
+
+## []{.theme-subtopic}{.smaller}
+
+### Criação de variáveis
+
+:::::: columns
+:::: {.column width="50%"}
+::: nonincremental
+Estado/UF
+
+- Variável da PNADC (`UF`)
+
+População Ocupada
+
+- Baseado na condição de ocupação (`VD4002`)
+
+Potencialmente beneficiados
+
+- Com base na renda mensal do trabalho principal (`VD4017`)
+
+  - Beneficiário: renda menor ou igual a R$ 5.000,00
+  
+  - Não beneficiário: acima de R$ 5.000,00
+:::
+::::
+
+::: {.column width="50%"}
+![](images/variaveis.png){fig-align="center" width="120%" height="120%"}
+:::
+::::::
+
+# (Parêntesis) {.theme-first}
+
+::: {style="text-align: left;"}
+Distintas formas de importação dos dados
+:::
+
+## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="70%"}
+**1. Importação de dados trimestrais:**
+```{r,eval=FALSE}
+ Pnad_2022_2s <- get_pnadc(
+           
+   year = 2022,# obrigatório de ser declarado 
+   quarter = 2, # utilizado somente quando importaremos dados em determinado trimestre
+   design = TRUE, # opcional, utilizado caso queira aplicar o plano amostral complexo aos dados
+   vars = c("codigo_variavel1","codigo_variavel2", "codigo_variavelN"), # opcional
+   labels = TRUE, # é o default, para rotular os dados
+   deflator = TRUE # é o default, para incluir variável de deflacionamento direto do IBGE
+)
+```
+:::
+
+:::: {.column width="30%"}
+![](images/importacao_trimestrais.png){fig-align="center" width="60%" height="60%"}
+::::
+::::::
+
+## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="70%"}
+**2. Importação dos dados ACUMULADOS em determinada visita:**
+```{r,eval=FALSE}
+Pnad_2022_2s <- get_pnadc(
+  year = 2022, # obrigatório de ser declarado
+  interview = 1, # utilizado somente quando importaremos dados em determinada visita
+  design = TRUE, # opcional, utilizado caso queira aplicar o plano amostral complexo aos dados
+  vars = c("codigo_variavel1","codigo_variavel2", "codigo_variavelN"), # opcional
+  labels = TRUE, # é o default, para rotular os dados
+  deflator = TRUE # é o default, para incluir variável de deflacionamento direto do IBGE
+)
+```
+:::
+
+:::: {.column width="30%"}
+![](images/importacao_visita.png){fig-align="center" width="100%" height="100%"}
+::::
+::::::
+
+## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="70%"}
+**3. Importação de SUPLEMENTO de dados ACUMULADOS em determinado trimestre:**
+
+Variáveis iniciadas com $V$ ou $VI$: ver sempre o dicionário
+```{r,eval=FALSE}
+Pnad_2022_2s <- get_pnadc(
+  year = 2022, # obrigatório de ser declarado
+  topic = 4, # utilizado somente quando importaremos dados em determinado trimestre
+  design = TRUE, # opcional, utilizado caso queira aplicar o plano amostral complexo aos dados
+  vars = c("codigo_variavel1","codigo_variavel2", "codigo_variavelN"), # opcional
+  labels = TRUE, # é o default, para rotular os dados
+  deflator = TRUE # é o default, para incluir variável de deflacionamento direto do IBGE
+)
+```
+:::
+
+:::: {.column width="30%"}
+![](images/importacao_suplemento_trimestre.png){fig-align="center" width="100%" height="100%"}
+::::
+::::::
+
+## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+
+:::::: columns
+::: {.column width="70%"}
+**4. Importação dos dados ACUMULADOS em determinado trimestre para suplementos específicos:**
+
+Variáveis iniciadas com $S$: ver sempre o dicionário
+```{r,eval=FALSE}
+ Pnad_2022_2s <- get_pnadc(
+   year = 2022, # obrigatório de ser declarado
+   topic = 4, # utilizado somente quando importaremos dados em determinado trimestre
+   selected = TRUE, # utilizado para suplementos coletados para alguns moradores
+   design = TRUE, # opcional, utilizado caso queira aplicar o plano amostral complexo aos dados
+   vars = c("codigo_variavel1","codigo_variavel2", "codigo_variavelN"), # opcional
+   labels = TRUE, # é o default, para rotular os dados
+   deflator = TRUE # é o default, para incluir variável de deflacionamento direto do IBGE
+)
+```
+:::
+
+:::: {.column width="30%"}
+![](images/importacao_suplemento_trimestre.png){fig-align="center" width="100%" height="100%"}
+::::
+::::::
+
+## Vamos para o R! {.theme-next .smaller}
+
+:::::: columns
+::: {.column width="40%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/hands-on.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
+::::
+::::::
+
+# Pausa! {.theme-stop}
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+```
+:::
+
+## [Sobre o caso]{.theme-subtopic}{.smaller}
+
+![](images/pratica_mapa.png){fig-align="center" width="80%" height="80%"}
+
+# Tópico complementar {.theme-first}
+
+::: {style="text-align: left;"}
+...
+:::
+
+## [...]{.theme-subtopic} {.smaller}
+
+# Próximos passos {.theme-first}
+
+::: {style="text-align: left;"}
+:::
+
+## [Recapitulando]{.theme-subtopic} {.smaller}
+
+O que vimos no curso:
+
+- Finalidades da PNADC
+
+- Mudanças entre PNAD e PNADC e as vantagens da nova pesquisa
+
+- SIPD e construção da Amostra Mestra
+
+- Operacionalização da coleta da PNADC
+
+- Estratégias de divulgação da pesquisa
+
+- R e RStudio para análise de dados
+
+- Técnicas de avaliação da qualidade das estimativas
+
+- Formas de importação de dados da PNADC em R
+
+- Uso de suplementos da PNADC em R
+
+- Manipulações e análises da PNADC orientada a problemas empíricos
+
+## [Na PNADC]{.theme-subtopic} {.font-size-small}
+
+- Limitações de análises
+
+  - Pandemia de Covid-19 e qualidade das estimativas
+
+- Diferentes estimativas para diferentes pesos adotados
+
+- Compatibilização com outras bases de dados públicas ou privadas
+
+- Análises em nível micro (geograficamente)
+
+- Compatibilização da série PNAD (antiga) e PNADC
+
+- Longitudinalização da PNADC
+
+- O que o Censo 2022 traz de novidade?
+
+- Tópicos complementares de análise
+
+  - Classificações de atividade econômica e ocupação (CNAE e CBO)
+
+  - Ponderação manual dos dados da PNADC após manipulação ([exemplo](https://github.com/thiagocalm/Idoso_raca_mt))
+
+  - Trabalhando com deflacionamentos na PNADC
+
+  - Trabalhando com análises a nível domiciliar com PNADC
+
+- ...
+
+## [No R]{.theme-subtopic} {.smaller}
+
+- Gramática Tydiverse para manipulação de dados
+
+- Gráficos em `{ggplot}`
+
+- Criando suas próprias funções em R
+
+- Mapas em R
+
+- Automatização e reprodutibilidade de processos
+
+- ...
+
+## [Outros cursos do cebrap.lab]{.theme-subtopic} {.smaller}
+
+Indicadores sociais e territoriais: como construir e utilizar? - Em novembro
+
+Análise quantitativa de texto com R - Em novembro
+
+## Isso é tudo para hoje! {.theme-next}
+
+## Isso é tudo para hoje! {.theme-next}
+
+Exercício final!
+
+...
+
+#  {.cebrap-fim .smaller}
+
+![](images/cebrap50.png){.absolute top="-90" right="460" width="100" height="100"}
+
+:::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: right;"}
+**Presidência**
+
+**Diretoria Administrativa**
+
+**Diretoria Científica**
+
+**Coordenação de Seminários**
+
+**Coordenação de Cursos**
+:::
+::::
+
+::: {.column width="50%"}
+Adrian Gurza Lavalle
+
+Victor Callil
+
+Arilson Favareto
+
+Bianca Tavolari
+
+Monise Fernandes Picanço
+:::
+::::::
+
+::: {style="text-align: center;"}
+**Curso**
+
+Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)
+
+**Ministrante**
+
+Thiago Cordeiro Almeida
+
+E-mail: [thiagocordalmeida\@gmail.com](thiagocordalmeida@gmail.com)
+
+Github: [\@thiagocalm](github.com/thiagocalm)
+:::
