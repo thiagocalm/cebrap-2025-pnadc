@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-10-03">
+<meta name="dcterms.date" content="2025-10-05">
 <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -208,7 +208,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">October 3, 2025</p>
+  <p class="date">October 5, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -613,7 +613,23 @@ Thiago Cordeiro Almeida
 <li><p>Em geral, é multiplicado por 100.</p></li>
 </ul>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn7"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section></section><section><section id="pnadc-no-r" class="title-slide slide level1 theme-first center"><h1>PNADC no R</h1>
+<aside><ol class="aside-footnotes"><li id="fn7"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section><section id="técnicas-de-avaliação-da-qualidade-da-estimativa-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
+<p>Há algumas formas de avaliarmos a qualidade das estimativas através de medidas de variabilidade.</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Intervalo de Confiança</strong></p>
+<ul>
+<li><p>Diz respeito à confiabilidade das estimativas produzidas.</p></li>
+<li><p>Os limites dizem qual é a faixa dentro da qual os resultados podem variar, caso o estudo seja repetido N vezes.</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p><strong>Coeficiente de Variação (CV) ou Desvio Padrão Relativo (DPR)</strong><sup>1</sup></p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/quadro_cv.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section></section><section><section id="pnadc-no-r" class="title-slide slide level1 theme-first center"><h1>PNADC no R</h1>
 <div style="text-align: left;">
 
 </div>
@@ -650,7 +666,7 @@ Thiago Cordeiro Almeida
 <ul>
 <li><p>PNADcIBGE: <code>install.packages("survey")</code></p></li>
 <li><p>survey: <code>install.packages("survey")</code></p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn8"><p><strong>Carregamento de pacotes:</strong> Pacotes devem ser carregados todas as vezes que iniciamos uma sessão do R.</p></li></ol></aside></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
+</ul><aside><ol class="aside-footnotes"><li id="fn9"><p><strong>Carregamento de pacotes:</strong> Pacotes devem ser carregados todas as vezes que iniciamos uma sessão do R.</p></li></ol></aside></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Depois, carregamos os pacotes de interesse<sup>1</sup>…</p>
 <ul>
 <li>PNADcIBGE:</li>
@@ -664,7 +680,7 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn9"><p><strong>Instalação de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Instalação de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
 <p><strong>1. Diretamente no R</strong>: É possível baixar diretamente no R, selecionando as variáveis desejadas e já contemplando o plano amostral<sup>1</sup>.</p>
 <p>Exemplo 1: Baixando o banco do segundo trimestre de 2023</p>
 <div class="cell">
@@ -674,7 +690,7 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>dadosPNADc_anual_trimestre_2020 <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(<span class="at">year=</span><span class="dv">2020</span>, <span class="at">topic=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Tempo de download:</strong> A depender da internet, o tempo para download dos dados pode variar bastante…</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn11"><p><strong>Tempo de download:</strong> A depender da internet, o tempo para download dos dados pode variar bastante…</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
 <p><strong>2. É possível baixar no site do IBGE e abrir no R</strong>: Neste caso, será necessário atribuir o “input” e os labels das variáveis. Para isso, é necessário que o banco de dados, o arquivo de input (.txt) e o dicionário (xls) estejam todos baixados. Todos esses 3 arquivos (banco de dados, input e dicionário) podem ser baixados no site do IBGE.</p>
 <p>Exemplo de código para isso: Terceiro trimestre de 2016</p>
 <div class="cell">
