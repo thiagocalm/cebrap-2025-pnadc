@@ -91,7 +91,7 @@ Fluxo de análise de dados[^1] que, geralmente, seguimos:
 
 [^1]: Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.
 
-## [Natureza das variáveis]{.theme-subtopic}{.smaller}
+## [Natureza das variáveis]{.theme-subtopic} {.smaller}
 
 São categorizações excludentes, *todavia, uma variável pode ser transformada em outra natureza/tipo*.
 
@@ -125,10 +125,10 @@ Valores são expressos em números, apresentam quantidades.
 :::
 :::::
 
-## [Natureza das variáveis em R]{.theme-subtopic}{.smaller}
-:::::: nonincremental
+## [Natureza das variáveis em R]{.theme-subtopic} {.smaller}
 
-**Como verificar:** no R, podemos verificar o seu tipo/natureza usando  funções, como “class()” ou “str()”.
+:::::: nonincremental
+**Como verificar:** no R, podemos verificar o seu tipo/natureza usando funções, como “class()” ou “str()”.
 
 ::::: columns
 ::: {.column width="50%"}
@@ -159,10 +159,9 @@ Valores são expressos em números, apresentam quantidades.
     -   R: double
 :::
 :::::
-
 ::::::
 
-## [Tipos de medidas]{.theme-subtopic}{.smaller}
+## [Tipos de medidas]{.theme-subtopic} {.smaller}
 
 Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.
 
@@ -327,28 +326,28 @@ A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo �
 
 ![](images/IRPFM_ideia.png){fig-align="center" width="100%" height="100%"}
 
-## [O caso]{.theme-subtopic}{.font-size-small}
+## [O caso]{.theme-subtopic} {.font-size-small}
 
 A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
 
 :::::: columns
 :::: {.column width="70%"}
 ::: nonincremental
-
 ### Problemática
+
 Qual seria a parcela dos trabalhadores do estado que *potencialmente* seriam beneficiados com imposto zero?
 
 ### Tarefas para responder à problemática
 
-1. Número de pessoas ocupadas no Brasil.
+1.  Número de pessoas ocupadas no Brasil.
 
-2. Número de pessoas Ocupadas com potencialmente beneficiados.
+2.  Número de pessoas Ocupadas com potencialmente beneficiados.
 
-3. Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
+3.  Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
 
-4. Renda média do grupo dos potencialmente beneficiados ou não.
+4.  Renda média do grupo dos potencialmente beneficiados ou não.
 
-5. Proporção de potencialmente beneficiados por UF.
+5.  Proporção de potencialmente beneficiados por UF.
 :::
 ::::
 
@@ -357,28 +356,28 @@ Qual seria a parcela dos trabalhadores do estado que *potencialmente* seriam ben
 :::
 ::::::
 
-## [O caso]{.theme-subtopic}{.font-size-small}
+## [O caso]{.theme-subtopic} {.font-size-small}
 
 A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
 
 :::::: columns
 :::: {.column width="70%"}
 ::: nonincremental
-
 ### Problemática
+
 Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* seriam **beneficiados com imposto zero**?
 
 ### Tarefas para responder à problemática
 
-1. Número de pessoas ocupadas no Brasil.
+1.  Número de pessoas ocupadas no Brasil.
 
-2. Número de pessoas Ocupadas com potencialmente beneficiados.
+2.  Número de pessoas Ocupadas com potencialmente beneficiados.
 
-3. Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
+3.  Proporção de pessoas ocupadas potencialmente beneficiados entre os ocupados.
 
-4. Renda média do grupo dos potencialmente beneficiados ou não.
+4.  Renda média do grupo dos potencialmente beneficiados ou não.
 
-5. Proporção de potencialmente beneficiados por UF.
+5.  Proporção de potencialmente beneficiados por UF.
 :::
 ::::
 
@@ -391,7 +390,7 @@ Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* se
 
 ![](images/pratica_dados.png){fig-align="center" width="120%" height="120%"}
 
-## []{.theme-subtopic}{.smaller}
+##  {.smaller}
 
 ### Criação de variáveis
 
@@ -400,19 +399,19 @@ Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* se
 ::: nonincremental
 Estado/UF
 
-- Variável da PNADC (`UF`)
+-   Variável da PNADC (`UF`)
 
 População Ocupada
 
-- Baseado na condição de ocupação (`VD4002`)
+-   Baseado na condição de ocupação (`VD4002`)
 
 Potencialmente beneficiados
 
-- Com base na renda mensal do trabalho principal (`VD4017`)
+-   Com base na renda mensal do trabalho principal (`VD4017`)
 
-  - Beneficiário: renda menor ou igual a R$ 5.000,00
-  
-  - Não beneficiário: acima de R$ 5.000,00
+    -   Beneficiário: renda menor ou igual a R\$ 5.000,00
+
+    -   Não beneficiário: acima de R\$ 5.000,00
 :::
 ::::
 
@@ -427,11 +426,12 @@ Potencialmente beneficiados
 Distintas formas de importação dos dados
 :::
 
-## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
 
-:::::: columns
+::::: columns
 ::: {.column width="70%"}
 **1. Importação de dados trimestrais:**
+
 ```{r,eval=FALSE}
  Pnad_2022_2s <- get_pnadc(
            
@@ -445,16 +445,17 @@ Distintas formas de importação dos dados
 ```
 :::
 
-:::: {.column width="30%"}
+::: {.column width="30%"}
 ![](images/importacao_trimestrais.png){fig-align="center" width="60%" height="60%"}
-::::
-::::::
+:::
+:::::
 
-## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
 
-:::::: columns
+::::: columns
 ::: {.column width="70%"}
 **2. Importação dos dados ACUMULADOS em determinada visita:**
+
 ```{r,eval=FALSE}
 Pnad_2022_2s <- get_pnadc(
   year = 2022, # obrigatório de ser declarado
@@ -467,18 +468,19 @@ Pnad_2022_2s <- get_pnadc(
 ```
 :::
 
-:::: {.column width="30%"}
+::: {.column width="30%"}
 ![](images/importacao_visita.png){fig-align="center" width="100%" height="100%"}
-::::
-::::::
+:::
+:::::
 
-## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
 
-:::::: columns
+::::: columns
 ::: {.column width="70%"}
 **3. Importação de SUPLEMENTO de dados ACUMULADOS em determinado trimestre:**
 
 Variáveis iniciadas com $V$ ou $VI$: ver sempre o dicionário
+
 ```{r,eval=FALSE}
 Pnad_2022_2s <- get_pnadc(
   year = 2022, # obrigatório de ser declarado
@@ -491,18 +493,19 @@ Pnad_2022_2s <- get_pnadc(
 ```
 :::
 
-:::: {.column width="30%"}
+::: {.column width="30%"}
 ![](images/importacao_suplemento_trimestre.png){fig-align="center" width="100%" height="100%"}
-::::
-::::::
+:::
+:::::
 
-## [Formas de importação dos dados]{.theme-subtopic}{.smaller}
+## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
 
-:::::: columns
+::::: columns
 ::: {.column width="70%"}
 **4. Importação dos dados ACUMULADOS em determinado trimestre para suplementos específicos:**
 
 Variáveis iniciadas com $S$: ver sempre o dicionário
+
 ```{r,eval=FALSE}
  Pnad_2022_2s <- get_pnadc(
    year = 2022, # obrigatório de ser declarado
@@ -516,16 +519,15 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 ```
 :::
 
-:::: {.column width="30%"}
+::: {.column width="30%"}
 ![](images/importacao_suplemento_trimestre.png){fig-align="center" width="100%" height="100%"}
-::::
-::::::
+:::
+:::::
 
 ## Vamos para o R! {.theme-next .smaller}
 
 :::::: columns
 ::: {.column width="40%"}
-
 :::
 
 :::: {.column width="60%"}
@@ -547,7 +549,7 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 ```
 :::
 
-## [Sobre o caso]{.theme-subtopic}{.smaller}
+## [Sobre o caso]{.theme-subtopic} {.smaller}
 
 ![](images/pratica_mapa.png){fig-align="center" width="80%" height="80%"}
 
@@ -568,69 +570,69 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 
 O que vimos no curso:
 
-- Finalidades da PNADC
+-   Finalidades da PNADC
 
-- Mudanças entre PNAD e PNADC e as vantagens da nova pesquisa
+-   Mudanças entre PNAD e PNADC e as vantagens da nova pesquisa
 
-- SIPD e construção da Amostra Mestra
+-   SIPD e construção da Amostra Mestra
 
-- Operacionalização da coleta da PNADC
+-   Operacionalização da coleta da PNADC
 
-- Estratégias de divulgação da pesquisa
+-   Estratégias de divulgação da pesquisa
 
-- R e RStudio para análise de dados
+-   R e RStudio para análise de dados
 
-- Técnicas de avaliação da qualidade das estimativas
+-   Técnicas de avaliação da qualidade das estimativas
 
-- Formas de importação de dados da PNADC em R
+-   Formas de importação de dados da PNADC em R
 
-- Uso de suplementos da PNADC em R
+-   Uso de suplementos da PNADC em R
 
-- Manipulações e análises da PNADC orientada a problemas empíricos
+-   Manipulações e análises da PNADC orientada a problemas empíricos
 
 ## [Na PNADC]{.theme-subtopic} {.font-size-small}
 
-- Limitações de análises
+-   Limitações de análises
 
-  - Pandemia de Covid-19 e qualidade das estimativas
+    -   Pandemia de Covid-19 e qualidade das estimativas
 
-- Diferentes estimativas para diferentes pesos adotados
+-   Diferentes estimativas para diferentes pesos adotados
 
-- Compatibilização com outras bases de dados públicas ou privadas
+-   Compatibilização com outras bases de dados públicas ou privadas
 
-- Análises em nível micro (geograficamente)
+-   Análises em nível micro (geograficamente)
 
-- Compatibilização da série PNAD (antiga) e PNADC
+-   Compatibilização da série PNAD (antiga) e PNADC
 
-- Longitudinalização da PNADC
+-   Longitudinalização da PNADC
 
-- O que o Censo 2022 traz de novidade?
+-   O que o Censo 2022 traz de novidade?
 
-- Tópicos complementares de análise
+-   Tópicos complementares de análise
 
-  - Classificações de atividade econômica e ocupação (CNAE e CBO)
+    -   Classificações de atividade econômica e ocupação (CNAE e CBO)
 
-  - Ponderação manual dos dados da PNADC após manipulação ([exemplo](https://github.com/thiagocalm/Idoso_raca_mt))
+    -   Ponderação manual dos dados da PNADC após manipulação ([exemplo](https://github.com/thiagocalm/Idoso_raca_mt))
 
-  - Trabalhando com deflacionamentos na PNADC
+    -   Trabalhando com deflacionamentos na PNADC
 
-  - Trabalhando com análises a nível domiciliar com PNADC
+    -   Trabalhando com análises a nível domiciliar com PNADC
 
-- ...
+-   ...
 
 ## [No R]{.theme-subtopic} {.smaller}
 
-- Gramática Tydiverse para manipulação de dados
+-   Gramática Tydiverse para manipulação de dados
 
-- Gráficos em `{ggplot}`
+-   Gráficos em `{ggplot}`
 
-- Criando suas próprias funções em R
+-   Criando suas próprias funções em R
 
-- Mapas em R
+-   Mapas em R
 
-- Automatização e reprodutibilidade de processos
+-   Automatização e reprodutibilidade de processos
 
-- ...
+-   ...
 
 ## [Outros cursos do cebrap.lab]{.theme-subtopic} {.smaller}
 
