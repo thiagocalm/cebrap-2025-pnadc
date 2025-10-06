@@ -65,33 +65,30 @@ Tópicos que vamos cobrir hoje são:
 O que é essa pesquisa?
 :::
 
-## PNADC {.theme-subtopic .smaller}
+## [PNADC]{.theme-subtopic}{.smaller}
 
-:::::: columns
-:::: {.column width="30%"}
-::: nonincremental
+::::: columns
+::: {.column width="30%"}
 ### Objetivo
 
 Acompanhar flutuações trimestrais e a evolução (no curto, médio e longo prazo) da força de trabalho, bem como de outras informações necessárias para o estudo do desenvolvimento socioeconômico no país.
 :::
-::::
 
-::: {.column .fragment width="70%"}
+::: {.column width="70%"}
+
 :::
-::::::
+:::::
 
-## PNADC {.theme-subtopic .smaller}
+## [PNADC]{.theme-subtopic}{.smaller}
 
-:::::: columns
-:::: {.column width="30%"}
-::: nonincremental
+::::: columns
+::: {.column width="30%"}
 ### Objetivo
 
 Acompanhar flutuações trimestrais e a evolução (no curto, médio e longo prazo) da força de trabalho, bem como de outras informações necessárias para o estudo do desenvolvimento socioeconômico no país.
 :::
-::::
 
-::: {.column .fragment width="70%"}
+::: {.column width="70%"}
 ### Características
 
 -   Está dentro de um conjunto de **pesquisas amostrais domiciliares** que ocorrem em todo o mundo.
@@ -102,13 +99,11 @@ Acompanhar flutuações trimestrais e a evolução (no curto, médio e longo pra
 
 -   É realizada em cerca de 3.500 municípios.
 
--   Cobre todo o território brasileiro[^1].
+-   Cobre todo o território brasileiro^[**Exceto:** Aldeias indígenas, quartéis, bases militares, alojamentos, acampamentos, embarcações, penitenciárias, colônias penais, hospitais, etc.].
 
 -   Foi criada para substituir outras duas pesquisas amostrais do IBGE: PNAD e PME.
 :::
-::::::
-
-[^1]: **Exceto:** Aldeias indígenas, quartéis, bases militares, alojamentos, acampamentos, embarcações, penitenciárias, colônias penais, hospitais, etc.
+:::::
 
 ## [SIPD - Sistema Integrado de Pesquisas Domiciliares]{.theme-subtopic} {.smaller}
 
@@ -154,7 +149,11 @@ A **PNADC** faz parte do SIPD.
 
 ## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic} {.font-size-small}
 
-![](images/timeline.png){.absolute top="55" left="50" width="891" height="194"} <br>
+![](images/timeline.png){.absolute top="65" left="50" width="891" height="194"} <br>
+
+## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic} {.font-size-small}
+
+![](images/timeline.png){.absolute top="65" left="50" width="891" height="194"} <br>
 
 <br>
 
@@ -186,22 +185,26 @@ Periodicidade da divulgação
 :::
 :::::
 
-## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic} {.font-size-small}
+## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic}{.font-size-small}
 
-![](images/tabela_sc.png){.absolute top="55" left="50" width="70%" height="70%"} <br>
+::::: columns
+::: {.column width="70%"}
+![](images/tabela_sc.png){fig-align="center" width="120%" height="120%"}
+:::
 
-<br>
+::: {.column width="30%"}
 
-<br>
+:::
+:::::
 
-<br>
+## [Retrospectiva: da PNAD (e PME) à PNADC]{.theme-subtopic}{.font-size-small}
 
-<br>
+::::: columns
+::: {.column width="70%"}
+![](images/tabela_sc.png){fig-align="center" width="120%" height="120%"}
+:::
 
-<br>
-
-<br>
-
+::: {.column width="30%"}
 Ela nos permite:
 
 -   Acompanhar o mesmo domicílio ao longo de 5 trimestres/visitas
@@ -211,6 +214,8 @@ Ela nos permite:
 -   Permite uma maior desagregação espacial das informações
 
 -   Incorporação de novos temas em uma mesma base
+:::
+:::::
 
 # Operacionalização da coleta da pesquisa {.theme-first}
 
@@ -256,6 +261,10 @@ Um fragmento, parte, subconjunto da população estudada. É definida, em geral,
 
 A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios, com estratificação geográfica:
 
+## [Como é construída a amostra?]{.theme-subtopic} {.smaller}
+
+A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios, com estratificação geográfica:
+
 ### Estágio 1
 
 Seleção das **Unidades Primárias de Amostragem (UPAs)**.
@@ -271,6 +280,25 @@ De onde as UPAs vêm?
 -   São calculadas com base na Amostra Mestra
 
 -   São compostas por um ou mais setores censitários contíguos;
+:::
+
+::: {.column width="70%"}
+
+:::
+:::::
+
+## [UPA e o Censo 2022]{.theme-subtopic} {.smaller}
+
+::::: columns
+::: {.column width="30%"}
+:::: nonincremental
+
+De onde as UPAs vêm?
+
+-   São calculadas com base na Amostra Mestra
+
+-   São compostas por um ou mais setores censitários contíguos;
+::::
 :::
 
 ::: {.column width="70%"}
@@ -366,6 +394,17 @@ Planejamento da coleta
 
 [^5]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
+## [Esquema de rotação 1-2(5)]{.theme-subtopic} {.smaller}
+
+::: nonincremental
+Planejamento da coleta
+
+-   Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^5].
+
+[^5]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
+
+:::
+
 O esquema
 
 -   **1**: Uma visita em um mês;
@@ -414,6 +453,8 @@ Calendários, temas e formas de divulgação
 :::
 
 ## [Previsões de datas de divulgação]{.theme-subtopic} {.smaller}
+
+No [site do IBGE](https://www.ibge.gov.br/estatisticas/sociais/populacao/17270-pnad-continua.html?edicao=44609&t=calendario), há toda a previsão de datas.
 
 ![](images/divulgacao_calendario.png){fig-align="center" width="120%" height="120%"}
 
@@ -502,6 +543,7 @@ Faça um mapa com duas camadas para o ano mais recente disponível:
 :::
 
 ::: {.column width="80%"}
+:::: nonincremental
 É um ótimo recurso para trabalharmos de forma mais genérica, rápida, sem precisar baixar os microdados (!)
 
 O SIDRA é importante para:
@@ -523,6 +565,7 @@ Nele, poderemos obter distintas informações:
 Limitação
 
 -   Em geral, os cruzamentos disponíveis são muito limitados.
+::::
 :::
 :::::
 
@@ -590,19 +633,19 @@ Pode ser acessado via: <https://sidra.ibge.gov.br/pesquisa/pnadca/tabelas>
 
 ![](images/divulgacao_sidra_8.png){fig-align="center" width="120%" height="120%"}
 
-## Exercício! {.theme-next .smaller}
+## [Exercício!]{.theme-next}{.font-size-smallest}
 
 :::::: columns
 ::: {.column width="40%"}
 Utilizando o SIDRA, responda:
 
-1.  Qual é o principal motivo para as pessoas não terem viajado no Brasil em 2021? (8456)
+1.  Qual é o principal motivo para as pessoas não terem viajado no Brasil em 2024? (8456)
 
-2.  Qual o número total de viagens por motivos pessoais e profissionais, realizadas nos últimos 3 meses antes da pesquisa, em 2019, 2020 e 2021? E qual o número de viagens nas quais as pessoas passaram apenas 1 pernoite fora de casa? (7204 e 6414)
+2.  Qual o principal motivo da viagem (pessoais ou profissionais) de quem realizou viagens nos últimos 3 meses antes da pesquisa, em 2019, 2020 e 2024? E qual o número de pessoas com viagens nas quais passaram apenas 1 pernoite fora de casa em 2024? (7204 e 6414)
 
-3.  Em 2021, qual a renda domiciliar per capita média em domicílios com acesso a televisão por assinatura no Centro-Oeste? E dos domicílios que da região Sul que não tem acesso á televisão por assinatura? (7280)
+3.  Em 2024, qual a renda domiciliar per capita média em domicílios com acesso a televisão por assinatura no Norte? E dos domicílios que da região Sul que não tem acesso á televisão por assinatura? (7280)
 
-4.  Em 2021, qual a região metropolitana do país com mais proporção de pessoas com acesso à internet? E qual a RM com menor proporção? (7316)
+4.  Em 2024, qual a região metropolitana do país com mais proporção de pessoas que utilizaram internet? E qual a RM com menor proporção? (7325)
 
 5.  Faça um gráfico da taxa de analfabetismo das pessoas com 15 anos ou mais de idade em 2019, por grandes regiões. (7113)
 :::
@@ -618,7 +661,7 @@ Utilizando o SIDRA, responda:
 ::::::
 
 ## [Microdados]{.theme-subtopic} {.smaller}
-
+::: nonincremental
 ::::: columns
 ::: {.column width="20%"}
 ![](images/divulgacao_micro_mini.png){fig-align="center" width="120%" height="120%"}
@@ -644,6 +687,7 @@ O acesso aos microdados da PNAD Contínua é público:
 -   Via R (Aula 2!)
 :::
 :::::
+:::
 
 ## [Microdados]{.theme-subtopic} {.smaller}
 
@@ -692,13 +736,13 @@ Para próxima aula:
 
 ## Isso é tudo para hoje! {.theme-next .smaller}
 
-Orientações sobre o exercício: O que faremos com os dados suplementares da aula 3?
+Orientações sobre o exercício: O que faremos com os **temas complementares** do dia 4?
 
-1.  Na pasta compartilhada da aula, buscar por variáveis e/ou temas da PNADC para ver temas que te interesse.
+1.  Na pasta compartilhada da aula, buscar temas complementares que gostariam de ter algum aprofundamento maior.
 
--   Arquivos de dicionário: Pasta “Dicionários PNADC”.
+-   Disponibilizei o arquivo "word" intitulado "Alguns tópicos complementares".
 
--   Arquivo dos suplementos e temas: “IBGE - Pesquisas Suplementares Anuais.pdf"
+-   Podem sugerir outros tópicos, usando: Pasta “Dicionários PNADC”, arquivo dos suplementos e temas (“IBGE - Pesquisas Suplementares Anuais.pdf")
 
 2.  Abrir link da planilha compartilhada: Aba "Temas de interesse".
 
