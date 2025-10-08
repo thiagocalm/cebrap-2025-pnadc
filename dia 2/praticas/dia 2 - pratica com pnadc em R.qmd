@@ -59,7 +59,6 @@ ifelse(!require(writexl),install.packages("writexl"),require(writexl))
 
 ```
 
-
 # Importação dos dados
 
 Há duas formas de importação desses dados.
@@ -107,7 +106,7 @@ pnad_2016_3t <- pnadc_design(pnad_2016_3t )
 
 Após a aplicação do plano amostral ao banco de dados seguindo a função `pnadc_design()`, podemos fazer análises diretamente usando o pacote `{survey}`.
 
-1. Frequência absoluta de Tipo de vínculo do trabalho
+1.  Frequência absoluta de Tipo de vínculo do trabalho
 
 ```{r}
 vinculo_16_3t <- svytotal(~VD4009,design = pnad_2016_3t, na.rm = TRUE)
