@@ -2,7 +2,6 @@
 #'Roteiro trabalhos iniciais em R
 #'----------------------------------------
 
-
 # Manipulacoes gerais no R ------------------------------------------------
 
 # Criando variáveis
@@ -45,12 +44,12 @@ rm(list = ls())
 
 # Configurando diretorio de trabalho
 
-setwd("C:/Users/User/Desktop/Aulas/Cebrap/Práticas em R/") # configurando novo diretorio de trabalho
+# setwd("C:/Users/User/Desktop/Aulas/Cebrap/Práticas em R/") # configurando novo diretorio de trabalho
 
 getwd() # verificar se o diretorio foi alterado
 
 # Importacao
-alunos <- read.delim("alunos.txt", sep = ",")
+alunos <- read.delim(file.path("dia 2", "praticas","alunos.txt"), sep = ",")
 
 # Explorando a estrutura da base de dados
 
@@ -99,4 +98,4 @@ i <- alunos$media
 # Exportacao de um resultado ----------------------------------------------
 
 # Em csv
-write.csv2(alunos, "Dia3_exemplo_alterado.csv")
+write.csv2(alunos, "Dia2_exemplo_alterado.csv")

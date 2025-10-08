@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-10-05">
+<meta name="dcterms.date" content="2025-10-07">
 <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -208,13 +208,15 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">October 5, 2025</p>
+  <p class="date">October 7, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
 </section><section><section id="antes-de-começar-2" class="title-slide slide level1 center"><h1>Antes de começar (2)…</h1>
 <ul>
 <li><p>Dúvidas gerais sobre a aula anterior?</p></li>
+<li><p>Sobre sala de sigilo do IBGE: há somente para Censo Agrop. e Empresas</p></li>
+<li><p>Sobre as FCUs nos estratos da AM: não garantirá que possamos gearar estimativas para este subgrupo</p></li>
 <li><p>Exercício da aula anterior: dúvidas, comentários, considerações?</p></li>
 </ul>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: -150px; right: 0px; width: 200px; height: 200px; "></p>
@@ -284,7 +286,7 @@ Thiago Cordeiro Almeida
 </figure>
 </div>
 </div></div>
-</section><section id="section" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section><section id="section" class="slide level2 smaller"><h2></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Motivações para aprender (e se aprofundar):</p>
@@ -435,32 +437,46 @@ Thiago Cordeiro Almeida
 <p>Onde buscar?</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="google" class="nonincremental"><h3>Google</h3>
+<h3 id="google">Google</h3>
 <ul>
 <li class="fragment"><p>Por haver uma grande comunidade de usuários do R, há uma grande produção de conteúdos.</p></li>
 <li class="fragment"><p>O Google é uma ferramenta de busca capaz de selecionar alguns conteúdos associados à sua busca<sup>1</sup>.</p></li>
-</ul></section>
+</ul>
 </div><div class="column" style="width:50%;">
-<section id="stack-overflow" class="nonincremental"><h3>Stack Overflow</h3>
+<h3 id="stack-overflow">Stack Overflow</h3>
 <ul>
 <li class="fragment">É um site de pergunta e resposta muito utilizado em outros países. É fortemente alimentado por usuários de linguagem de programação (inclusive R!!!)<sup>2</sup>.</li>
-</ul></section>
+</ul>
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn3"><p><strong>Exemplo de busca de erro no Google:</strong> quando recebe algum erro rodando um código em R, pode-se jogar a mensagem de erro no google.</p></li><li id="fn4"><p>Para saber mais sobre boas práticas de construção de perguntas no Stack Overflow, ler pgs 44-45 de “Curso-R. Ciência de dados em R”, na ementa do curso.</p></li></ol></aside></section><section id="buscando-ajuda-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
 <p>Onde buscar?</p>
 <div class="columns">
 <div class="column" style="width:30%;">
-<section id="ias" class="nonincremental"><h3>IA’s</h3>
+<h3 id="ias">IA’s</h3>
 <ul>
 <li class="fragment"><p>Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.</p></li>
 <li class="fragment"><p>Usemos com cautela…</p></li>
-</ul></section>
+</ul>
+</div><div class="column" style="width:70%;">
+
+</div></div>
+</section><section id="buscando-ajuda-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
+<div class="nonincremetal">
+<p>Onde buscar?</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h3 id="ias-1">IA’s</h3>
+<ul>
+<li class="fragment"><p>Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.</p></li>
+<li class="fragment"><p>Usemos com cautela…</p></li>
+</ul>
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="images/chat_gpt.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
+</div>
 </section><section id="exercício" class="slide level2 theme-next smaller"><h2>Exercício!</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -483,7 +499,7 @@ Thiago Cordeiro Almeida
 <div style="text-align: left;">
 <p>Pesos amostrais</p>
 </div>
-</section><section id="pesos-amostrais" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</section><section id="peso-amostral" class="slide level2 smaller"><h2><span class="theme-subtopic">Peso amostral</span></h2>
 <p>É uma variável (ou um conjunto delas) que ajusta, pondera e expande os resultados de uma determinada amostra.</p>
 <p>Algumas observações sobre os pesos:</p>
 <ul>
@@ -493,10 +509,10 @@ Thiago Cordeiro Almeida
 <p>Há pacotes que otimizam nossa análise por não precisarmos de declarar os pesos ou precisarmos de declarar somente uma vez:</p>
 <ul>
 <li class="fragment"><p><code>{PNADcIBGE}</code></p></li>
-<li class="fragment"><p><a href="http://r-survey.r-forge.r-project.org/survey/">survey</a></p></li>
+<li class="fragment"><p>{<code>survey</code>}</p></li>
 </ul>
 </li>
-</ul><aside><ol class="aside-footnotes"><li id="fn5"><p><strong>Importância do SIDRA:</strong> é exatamente para atenuar erros no cálculo de nossas estimativas que usamos o SIDRA para validar o modo como estamos declarando o peso.</p></li></ol></aside></section><section id="pesos-amostrais-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</ul><aside><ol class="aside-footnotes"><li id="fn5"><p><strong>Importância do SIDRA:</strong> é exatamente para atenuar erros no cálculo de nossas estimativas que usamos o SIDRA para validar o modo como estamos declarando o peso.</p></li></ol></aside></section><section id="pesos-amostrais" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Os pesos nos dizem sobre:</p>
@@ -510,7 +526,7 @@ Thiago Cordeiro Almeida
 </figure>
 </div>
 </div></div>
-</section><section id="pesos-amostrais-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</section><section id="pesos-amostrais-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Quando se aplica os pesos:</p>
@@ -525,7 +541,7 @@ Thiago Cordeiro Almeida
 </figure>
 </div>
 </div></div>
-</section><section id="pesos-amostrais-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</section><section id="pesos-amostrais-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <p>Atenção!</p>
@@ -639,7 +655,7 @@ Thiago Cordeiro Almeida
 <figure><p><img data-src="images/divulgacao_micro_5.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="section-1" class="slide level2 font-size-small"><h2><span class="theme-subtopic"></span></h2>
+</section><section id="section-1" class="slide level2 font-size-small"><h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
