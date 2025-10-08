@@ -171,7 +171,7 @@ Representatividade geográfica da amostra
 
 -   **PME:** 6 RMs.
 
--   **PNADC:** Brasil, Grandes Regiões, UF, RMs que contém capital, RIDE, capitais.
+-   **PNADC:** Brasil, Grandes Regiões, UF, RMs que contém capital, RIDE, capitais (77-79 unidades)
 :::
 
 ::: {.column width="50%"}
@@ -411,7 +411,7 @@ O esquema
 
 -   **2**: Dois meses subsequentes sem visita;
 
--   **5**: Repete-se esse ciclo por 5 viistas.
+-   **5**: Repete-se esse ciclo por 5 visitas.
 
 ## [Esquema de rotação 1-2(5)]{.theme-subtopic} {.smaller}
 
