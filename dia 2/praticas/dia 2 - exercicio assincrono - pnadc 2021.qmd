@@ -49,11 +49,15 @@ Vamos trabalhar com dados dos Trimestres da PNADC para o ano de 2021. A ideia é
 
 # ajustes gerais
 options(timeout = 1200, scipen = 99999)
+invisible(gc())
 
 ## pacotes necessarios
 # instalando pacotes
 ifelse(!require(PNADcIBGE),install.packages("PNADcIBGE"),require(PNADcIBGE))
 ifelse(!require(survey),install.packages("survey"),require(survey))
+
+# definicao do diretorio de trabalho
+setwd(file.path(here::here(),"dia 2","praticas"))
 
 ```
 
@@ -65,10 +69,34 @@ Há duas formas de importação desses dados.
 
 ```{r}
 
-P_21_t1 <- get_pnadc(year = 2021, quarter = 1, design = TRUE, vars = c("VD4009", "VD4002"))
-P_21_t2 <- get_pnadc(year = 2021, quarter = 2, design = TRUE, vars = c("VD4009", "VD4002"))
-P_21_t3 <- get_pnadc(year = 2021, quarter = 3, design = TRUE, vars = c("VD4009", "VD4002"))
-P_21_t4 <- get_pnadc(year = 2021, quarter = 4, design = TRUE, vars = c("VD4009", "VD4002"))
+P_21_t1 <- get_pnadc(
+  year = 2021,
+  quarter = 1,
+  design = TRUE,
+  vars = c("VD4009", "VD4002"),
+  reload = FALSE
+)
+P_21_t2 <- get_pnadc(
+  year = 2021,
+  quarter = 2,
+  design = TRUE,
+  vars = c("VD4009", "VD4002"),
+  reload = FALSE
+)
+P_21_t3 <- get_pnadc(
+  year = 2021,
+  quarter = 3,
+  design = TRUE,
+  vars = c("VD4009", "VD4002"),
+  reload = FALSE
+)
+P_21_t4 <- get_pnadc(
+  year = 2021,
+  quarter = 4,
+  design = TRUE,
+  vars = c("VD4009", "VD4002"),
+  reload = FALSE
+)
 
 ```
 
@@ -295,7 +323,7 @@ vinculos <- vinculos |>
 
 Agora podemos gerar o nosso gráfico:
 
-```{r}
+```{r,eval=FALSE}
 vinculos |>
   ggplot() +
   aes(
@@ -313,8 +341,14 @@ vinculos |>
     x = "Trimestres",
     y = "Número total de vínculos",
     color = ""
+  ) +
+  theme(
+    legend.position = "bottom"
   )
 ```
+
+![](graf_tipo_vinculos.png){fig-align="center" width="100%" height="100%"}
+
 
 Esse gráfico pode passar por uma série de ajustes e modificações, para ficar ainda mais do jeito que gostaríamos.
 
