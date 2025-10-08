@@ -46,9 +46,9 @@ lista de presença!
 ::: nonincremental
 -   Dúvidas gerais sobre a aula anterior?
 
-  - Sobre sala de sigilo do IBGE: há somente para Censo Agrop. e Empresas
-  
-  - Sobre as FCUs nos estratos da AM: não garantirá que possamos gearar estimativas para este subgrupo
+-   Sobre sala de sigilo do IBGE: há somente para Censo Agrop. e Empresas
+
+-   Sobre as FCUs nos estratos da AM: não garantirá que possamos gearar estimativas para este subgrupo
 
 -   Exercício da aula anterior: dúvidas, comentários, considerações?
 
@@ -297,21 +297,21 @@ A maior arte do saber programar é saber onde procurar por resoluções dos prob
 
 Onde buscar?
 
-::::::: columns
-:::: {.column width="50%"}
+::::: columns
+::: {.column width="50%"}
 ### Google
 
 -   Por haver uma grande comunidade de usuários do R, há uma grande produção de conteúdos.
 
 -   O Google é uma ferramenta de busca capaz de selecionar alguns conteúdos associados à sua busca[^3].
-::::
+:::
 
-:::: {.column width="50%"}
+::: {.column width="50%"}
 ### Stack Overflow
 
 -   É um site de pergunta e resposta muito utilizado em outros países. É fortemente alimentado por usuários de linguagem de programação (inclusive R!!!)[^4].
-::::
-:::::::
+:::
+:::::
 
 [^3]: **Exemplo de busca de erro no Google:** quando recebe algum erro rodando um código em R, pode-se jogar a mensagem de erro no google.
 
@@ -321,40 +321,38 @@ Onde buscar?
 
 Onde buscar?
 
-:::::: columns
-:::: {.column width="30%"}
+::::: columns
+::: {.column width="30%"}
 ### IA's
 
 -   Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
 
 -   Usemos com cautela...
-::::
+:::
 
-:::: {.column width="70%"}
-::::
-::::::
+::: {.column width="70%"}
+:::
+:::::
 
 ## [Buscando ajuda]{.theme-subtopic} {.smaller}
 
-::::: nonincremetal
-
+:::::: nonincremetal
 Onde buscar?
 
-:::::: columns
-:::: {.column width="30%"}
+::::: columns
+::: {.column width="30%"}
 ### IA's
 
 -   Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
 
 -   Usemos com cautela...
-::::
+:::
 
-:::: {.column width="70%"}
+::: {.column width="70%"}
 ![](images/chat_gpt.png){fig-align="center" width="100%" height="100%"}
-::::
-::::::
-
+:::
 :::::
+::::::
 
 ## Exercício! {.theme-next .smaller}
 

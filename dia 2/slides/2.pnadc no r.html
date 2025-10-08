@@ -6,18 +6,18 @@
 <script src="2.pnadc no r_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="2.pnadc no r_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2.pnadc no r_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2.pnadc no r_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
-<meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-10-07">
-<title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="2.pnadc%20no%20r_files/libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="2.pnadc%20no%20r_files/libs/revealjs/dist/reveal.css">
-<style>
+<link href="2.pnadc no r_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Thiago Cordeiro Almeida">
+  <meta name="dcterms.date" content="2025-10-08">
+  <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="2.pnadc no r_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2.pnadc no r_files/libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,14 +96,14 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="2.pnadc%20no%20r_files/libs/revealjs/dist/theme/quarto-47d0a96916a93018930b2003f16f50ee.css">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="2.pnadc%20no%20r_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="2.pnadc no r_files/libs/revealjs/dist/theme/quarto-81d760842bcca669b7b3028d6b8c3cd6.css">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="2.pnadc no r_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -195,7 +195,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</h1>
   <p class="subtitle"><span style="font-size:1em;"> Dia 2 - R e manipulação dos dados da PNADC </span></p>
 
 <div class="quarto-title-authors">
@@ -204,15 +205,22 @@
 Thiago Cordeiro Almeida 
 </div>
         <p class="quarto-title-affiliation">
-            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br></p>
+            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br>
+          </p>
     </div>
 </div>
 
-  <p class="date">October 7, 2025</p>
-</section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
+  <p class="date">October 8, 2025</p>
+</section>
+<section id="antes-de-começar" class="title-slide slide level1 center">
+<h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
-</section><section><section id="antes-de-começar-2" class="title-slide slide level1 center"><h1>Antes de começar (2)…</h1>
+</section>
+
+<section>
+<section id="antes-de-começar-2" class="title-slide slide level1 center">
+<h1>Antes de começar (2)…</h1>
 <ul>
 <li><p>Dúvidas gerais sobre a aula anterior?</p></li>
 <li><p>Sobre sala de sigilo do IBGE: há somente para Censo Agrop. e Empresas</p></li>
@@ -220,7 +228,9 @@ Thiago Cordeiro Almeida
 <li><p>Exercício da aula anterior: dúvidas, comentários, considerações?</p></li>
 </ul>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: -150px; right: 0px; width: 200px; height: 200px; "></p>
-</section><section id="estrutura-da-aula" class="slide level2 theme-next"><h2>Estrutura da aula</h2>
+</section>
+<section id="estrutura-da-aula" class="slide level2 theme-next">
+<h2>Estrutura da aula</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Tópicos que vamos cobrir hoje são:</p>
@@ -234,35 +244,49 @@ Thiago Cordeiro Almeida
 </ul>
 </div>
 </div></div>
-</section></section><section><section id="ciclos-de-análise-de-dados" class="title-slide slide level1 theme-first center"><h1>Ciclos de análise de dados</h1>
+</section></section>
+<section>
+<section id="ciclos-de-análise-de-dados" class="title-slide slide level1 theme-first center">
+<h1>Ciclos de análise de dados</h1>
 <div style="text-align: left;">
 <p>Análise de dados, pesquisa e R</p>
 </div>
-</section><section id="análise-de-dados-pesquisa-e-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Análise de dados, pesquisa e R</span></h2>
+</section>
+<section id="análise-de-dados-pesquisa-e-r" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Análise de dados, pesquisa e R</span></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
 <p>Fluxo de análise de dados<sup>1</sup> que, geralmente, seguimos:</p>
 </div><div class="column" style="width:80%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/ciclo_analise_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/ciclo_analise_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.</p></li></ol></aside></section><section id="análise-de-dados-pesquisa-e-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Análise de dados, pesquisa e R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.</p></li></ol></aside></section>
+<section id="análise-de-dados-pesquisa-e-r-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Análise de dados, pesquisa e R</span></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
 <p>Fluxo de análise de dados<sup>1</sup> que, geralmente, seguimos:</p>
 </div><div class="column" style="width:80%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/ciclo_analise_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/ciclo_analise_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.</p></li></ol></aside></section></section><section><section id="introdução-ao-r-e-rstudio" class="title-slide slide level1 theme-first center"><h1>Introdução ao R e RStudio</h1>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.</p></li></ol></aside></section></section>
+<section>
+<section id="introdução-ao-r-e-rstudio" class="title-slide slide level1 theme-first center">
+<h1>Introdução ao R e RStudio</h1>
 <div style="text-align: left;">
 <p>Os softwares</p>
 </div>
-</section><section id="r" class="slide level2 smaller"><h2><span class="theme-subtopic">R</span></h2>
+</section>
+<section id="r" class="slide level2 smaller">
+<h2><span class="theme-subtopic">R</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
 <p>Sobre a linguagem R</p>
@@ -270,23 +294,24 @@ Thiago Cordeiro Almeida
 <li><p>Criada em 1995</p></li>
 <li><p>É uma linguagem de programação open source muldialmente conhecida e utilizada</p></li>
 <li><p>Por ser mundialmente conhecida e utilizada… há uma grande comunidade de usuários que contribuem para a sua melhoria</p></li>
-<li>
-<p>Principais funções do R</p>
+<li><p>Principais funções do R</p>
 <ul>
 <li><p>Manipulação de dados</p></li>
 <li><p>Ferramentas estatísticas</p></li>
 <li><p>Produção de gráficos de alta qualidade</p></li>
 <li><p>Georreferenciamento</p></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/logo_R.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/logo_R.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section><section id="section" class="slide level2 smaller"><h2></h2>
+</section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Motivações para aprender (e se aprofundar):</p>
@@ -299,11 +324,14 @@ Thiago Cordeiro Almeida
 </ul>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/languages_world.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/languages_world.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section><section id="rstudio" class="slide level2 smaller"><h2><span class="theme-subtopic">RStudio</span></h2>
+</section>
+<section id="rstudio" class="slide level2 smaller">
+<h2><span class="theme-subtopic">RStudio</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
 <p>Sobre a IDE</p>
@@ -311,129 +339,139 @@ Thiago Cordeiro Almeida
 <li><p>É um IDE (Integrated Development Environment) criada para o R;</p></li>
 <li><p>É um ambiente mais amigável de se trabalhar do que no R;</p></li>
 <li><p>Facilita e potencializa a programação em uma determinada linguagem</p></li>
-<li>
-<p>RStudio não é a única IDE do R, há outras que podem ser vistas e usadas por aí:</p>
+<li><p>RStudio não é a única IDE do R, há outras que podem ser vistas e usadas por aí:</p>
 <ul>
 <li><p>VSCODE</p></li>
 <li><p>PyCharm</p></li>
 <li><p>Eclipse</p></li>
 <li><p>…</p></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/logo_RStudio.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/logo_RStudio.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section></section><section><section id="introdução-ao-r-e-rstudio-1" class="title-slide slide level1 theme-first center"><h1>Introdução ao R e RStudio</h1>
+</section></section>
+<section>
+<section id="introdução-ao-r-e-rstudio-1" class="title-slide slide level1 theme-first center">
+<h1>Introdução ao R e RStudio</h1>
 <div style="text-align: left;">
 <p>Conceitos básicos para a PNADC</p>
 </div>
-</section><section id="conceitos-básicos-para-a-pnadc" class="slide level2 font-size-small"><h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
+</section>
+<section id="conceitos-básicos-para-a-pnadc" class="slide level2 font-size-small">
+<h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
 <p>Objetos de armazenamento no R</p>
 <ul>
-<li class="fragment">
-<p><strong>Objeto:</strong> é um “nome” que damos para guardar algum valor ou atributo.</p>
+<li class="fragment"><p><strong>Objeto:</strong> é um “nome” que damos para guardar algum valor ou atributo.</p>
 <ul>
 <li class="fragment">Usamos <code>&lt;-</code> ou <code>=</code> para atribuir algum valor a um nome.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Vetor:</strong> é um conjunto de valores de <em>mesma classe</em> atribuídos a um objeto.</p>
+</ul></li>
+<li class="fragment"><p><strong>Vetor:</strong> é um conjunto de valores de <em>mesma classe</em> atribuídos a um objeto.</p>
 <ul>
-<li class="fragment">Usamos, em geral, a função <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> para concatenar os valores no objeto.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Dataframes:</strong> são objetos que guardam nossos dados. Possuem linhas e colunas.</p>
+<li class="fragment">Usamos, em geral, a função <code>c()</code> para concatenar os valores no objeto.</li>
+</ul></li>
+<li class="fragment"><p><strong>Dataframes:</strong> são objetos que guardam nossos dados. Possuem linhas e colunas.</p>
 <ul>
 <li class="fragment"><p>Todos os seus elementos (colunas) têm que ter o mesmo número de linhas</p></li>
 <li class="fragment"><p>Todos os seus elementos (colunas) precisam ser nomeados.</p></li>
 <li class="fragment"><p>Têm duas dimensões.</p></li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Listas:</strong> é uma generalização dos datataframes e vetores. Permite agregar diferentes classes de objetos dentro dela.</p>
+</ul></li>
+<li class="fragment"><p><strong>Listas:</strong> é uma generalização dos datataframes e vetores. Permite agregar diferentes classes de objetos dentro dela.</p>
 <ul>
 <li class="fragment"><p>Todo dataframe é uma lista</p></li>
 <li class="fragment"><p>Todo vetor é uma lista.</p></li>
+</ul></li>
 </ul>
-</li>
-</ul></section><section id="conceitos-básicos-para-a-pnadc-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
+</section>
+<section id="conceitos-básicos-para-a-pnadc-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
 <p>Outros aspectos importantes</p>
 <ul>
-<li class="fragment">
-<p><strong>Cada coluna de um dataframe é tratada como uma variável</strong></p>
+<li class="fragment"><p><strong>Cada coluna de um dataframe é tratada como uma variável</strong></p>
 <ul>
 <li class="fragment">Cada coluna/variável deve, assim, ter somente uma classe/tipo.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>É possível armazenar uma variável em um vetor</strong></p>
+</ul></li>
+<li class="fragment"><p><strong>É possível armazenar uma variável em um vetor</strong></p>
 <ul>
 <li class="fragment">Este vetor, por sua vez, pode ser inserido em um dataframe posteriormente.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Survey Design:</strong> no R, é um tipo de objeto.</p>
+</ul></li>
+<li class="fragment"><p><strong>Survey Design:</strong> no R, é um tipo de objeto.</p>
 <ul>
 <li class="fragment"><p>É tratado assim quando é declarado como tal.</p></li>
 <li class="fragment"><p>Deve ser fruto de uma pesquisa amostral cujo o seu uso exige que se estabeleça ponderações previamente determinadas.</p></li>
 <li class="fragment"><p>Para tanto, é importante que se conheça a documentação da pesquisa a ser utilizada</p></li>
+</ul></li>
 </ul>
-</li>
-</ul></section><section id="conceitos-básicos-para-a-pnadc-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
+</section>
+<section id="conceitos-básicos-para-a-pnadc-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Conceitos básicos para a PNADC</span></h2>
 <p>O R é uma linguagem de programação muito próximo da forma “falada”.</p>
 <ul>
-<li class="fragment">
-<p><strong>Comandos</strong></p>
+<li class="fragment"><p><strong>Comandos</strong></p>
 <ul>
 <li class="fragment">Nós usamos “verbos” (comandos/funções) para indicar as ações que queremos conduzir no R.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Comandos básicos do R (R base)</strong></p>
+</ul></li>
+<li class="fragment"><p><strong>Comandos básicos do R (R base)</strong></p>
 <ul>
 <li class="fragment">São comandos que estão na raiz do programa, eles vêm junto com a sua instalação.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Pacotes</strong></p>
+</ul></li>
+<li class="fragment"><p><strong>Pacotes</strong></p>
 <ul>
 <li class="fragment"><p>São conjuntos de comandos (funções) que baixamos em nossa máquina e executamos para obter processamentos específicos.</p></li>
 <li class="fragment"><p>Um pacote pode contar uma série de funções/comandos.</p></li>
+</ul></li>
 </ul>
-</li>
-</ul></section><section id="visão-geral-de-como-funciona-o-rstudio" class="slide level2 smaller"><h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
+</section>
+<section id="visão-geral-de-como-funciona-o-rstudio" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/rstudio_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/rstudio_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="visão-geral-de-como-funciona-o-rstudio-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
+</section>
+<section id="visão-geral-de-como-funciona-o-rstudio-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/rstudio_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/rstudio_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="visão-geral-de-como-funciona-o-rstudio-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
+</section>
+<section id="visão-geral-de-como-funciona-o-rstudio-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/rstudio_3.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/rstudio_3.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="visão-geral-de-como-funciona-o-rstudio-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
+</section>
+<section id="visão-geral-de-como-funciona-o-rstudio-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/rstudio_4.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/rstudio_4.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="visão-geral-de-como-funciona-o-rstudio-4" class="slide level2 smaller"><h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
+</section>
+<section id="visão-geral-de-como-funciona-o-rstudio-4" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Visão geral de como funciona o RStudio</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/rstudio_5.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/rstudio_5.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="buscando-ajuda" class="slide level2"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
+</section>
+<section id="buscando-ajuda" class="slide level2">
+<h2><span class="theme-subtopic">Buscando ajuda</span></h2>
 <p>A maior arte do saber programar é saber onde procurar por resoluções dos problemas!!!</p>
-</section><section id="buscando-ajuda-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
+</section>
+<section id="buscando-ajuda-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Buscando ajuda</span></h2>
 <p>Onde buscar?</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -448,7 +486,9 @@ Thiago Cordeiro Almeida
 <li class="fragment">É um site de pergunta e resposta muito utilizado em outros países. É fortemente alimentado por usuários de linguagem de programação (inclusive R!!!)<sup>2</sup>.</li>
 </ul>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p><strong>Exemplo de busca de erro no Google:</strong> quando recebe algum erro rodando um código em R, pode-se jogar a mensagem de erro no google.</p></li><li id="fn4"><p>Para saber mais sobre boas práticas de construção de perguntas no Stack Overflow, ler pgs 44-45 de “Curso-R. Ciência de dados em R”, na ementa do curso.</p></li></ol></aside></section><section id="buscando-ajuda-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><strong>Exemplo de busca de erro no Google:</strong> quando recebe algum erro rodando um código em R, pode-se jogar a mensagem de erro no google.</p></li><li id="fn4"><p>Para saber mais sobre boas práticas de construção de perguntas no Stack Overflow, ler pgs 44-45 de “Curso-R. Ciência de dados em R”, na ementa do curso.</p></li></ol></aside></section>
+<section id="buscando-ajuda-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Buscando ajuda</span></h2>
 <p>Onde buscar?</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -460,7 +500,9 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:70%;">
 
 </div></div>
-</section><section id="buscando-ajuda-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Buscando ajuda</span></h2>
+</section>
+<section id="buscando-ajuda-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Buscando ajuda</span></h2>
 <div class="nonincremetal">
 <p>Onde buscar?</p>
 <div class="columns">
@@ -472,12 +514,15 @@ Thiago Cordeiro Almeida
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/chat_gpt.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/chat_gpt.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
 </div>
-</section><section id="exercício" class="slide level2 theme-next smaller"><h2>Exercício!</h2>
+</section>
+<section id="exercício" class="slide level2 theme-next smaller">
+<h2>Exercício!</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Usando a planilha “Trabalhadores”, disponível na pasta “arquivos complementares &gt; prática”, calcule:</p>
@@ -487,32 +532,39 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Qual a média de idade de todos os trabalhadores?</p></li>
 </ol>
 </div><div class="column" style="width:60%;">
-<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
-<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
-</div>
+
 </div></div>
-</section></section><section id="pausa" class="title-slide slide level1 theme-stop center"><h1>Pausa!</h1>
+</section></section>
+<section id="pausa" class="title-slide slide level1 theme-stop center">
+<h1>Pausa!</h1>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;">
 </div>
-</section><section><section id="trabalhando-com-dados-de-pesquisa-amostral-complexa" class="title-slide slide level1 theme-first center"><h1>Trabalhando com dados de pesquisa amostral complexa</h1>
+</section>
+
+<section>
+<section id="trabalhando-com-dados-de-pesquisa-amostral-complexa" class="title-slide slide level1 theme-first center">
+<h1>Trabalhando com dados de pesquisa amostral complexa</h1>
 <div style="text-align: left;">
 <p>Pesos amostrais</p>
 </div>
-</section><section id="peso-amostral" class="slide level2 smaller"><h2><span class="theme-subtopic">Peso amostral</span></h2>
+</section>
+<section id="peso-amostral" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Peso amostral</span></h2>
 <p>É uma variável (ou um conjunto delas) que ajusta, pondera e expande os resultados de uma determinada amostra.</p>
 <p>Algumas observações sobre os pesos:</p>
 <ul>
 <li class="fragment"><p>Garantem a representatividade dos dados que estamos trabalhando para a unidade de análise.</p></li>
 <li class="fragment"><p>Realizar análises com a PNADC sem declarar/aplicar seus pesos incorre em um grave erro e pode gerar estimativas viesadas<sup>1</sup>.</p></li>
-<li class="fragment">
-<p>Há pacotes que otimizam nossa análise por não precisarmos de declarar os pesos ou precisarmos de declarar somente uma vez:</p>
+<li class="fragment"><p>Há pacotes que otimizam nossa análise por não precisarmos de declarar os pesos ou precisarmos de declarar somente uma vez:</p>
 <ul>
 <li class="fragment"><p><code>{PNADcIBGE}</code></p></li>
 <li class="fragment"><p>{<code>survey</code>}</p></li>
+</ul></li>
 </ul>
-</li>
-</ul><aside><ol class="aside-footnotes"><li id="fn5"><p><strong>Importância do SIDRA:</strong> é exatamente para atenuar erros no cálculo de nossas estimativas que usamos o SIDRA para validar o modo como estamos declarando o peso.</p></li></ol></aside></section><section id="pesos-amostrais" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn5"><p><strong>Importância do SIDRA:</strong> é exatamente para atenuar erros no cálculo de nossas estimativas que usamos o SIDRA para validar o modo como estamos declarando o peso.</p></li></ol></aside></section>
+<section id="pesos-amostrais" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Os pesos nos dizem sobre:</p>
@@ -522,11 +574,14 @@ Thiago Cordeiro Almeida
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section><section id="pesos-amostrais-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</section>
+<section id="pesos-amostrais-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Quando se aplica os pesos:</p>
@@ -537,40 +592,44 @@ Thiago Cordeiro Almeida
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section><section id="pesos-amostrais-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pesos amostrais</span></h2>
+</section>
+<section id="pesos-amostrais-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pesos amostrais</span></h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <p>Atenção!</p>
 <ul>
 <li><p>A PNADC é uma pesquisa que tem como unidade de amostragem os <strong>domicílios</strong></p></li>
 <li><p>Seus pesos são os mesmos para todos os indivíduos de um determinado domicílio.</p></li>
-<li>
-<p>Quando expandidos, vão acompanhar determinadas características da população:</p>
+<li><p>Quando expandidos, vão acompanhar determinadas características da população:</p>
 <ul>
 <li><p>Para Brasil e UFs: total, idade e sexo</p></li>
 <li><p>Para demais níveis geográficos: total</p></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:20%;">
 
 </div></div>
-</section><section id="nível-do-domicílio-ou-dos-indivíduos" class="slide level2 smaller"><h2><span class="theme-subtopic">Nível do domicílio ou dos indivíduos?</span></h2>
+</section>
+<section id="nível-do-domicílio-ou-dos-indivíduos" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Nível do domicílio ou dos indivíduos?</span></h2>
 <p>Nossa unidade de coleta é cada <strong>domicílio</strong>, mas coletamos dados também das <strong>pessoas</strong> (moradores).</p>
 <p>Peso de cada domicílio e pessoa</p>
 <ul>
-<li>
-<p><strong>Domicílio:</strong> recebe um peso relativo ao extrato ao qual ele se encontra.</p>
+<li><p><strong>Domicílio:</strong> recebe um peso relativo ao extrato ao qual ele se encontra.</p>
 <ul>
 <li>Compreender o modo como a Amostra Mestre é construída é importante por isso!</li>
-</ul>
-</li>
+</ul></li>
 <li><p><strong>Pessoa:</strong> todas de um domicílio recebem o mesmo peso<sup>1</sup>.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn6"><p><strong>Peso do domicílio:</strong> embora todas as pessoas do domicílio recebam o mesmo peso, para análises domiciliares, devemos escolher somente uma unidade para representar o domicílio.</p></li></ol></aside></section><section id="nível-do-domicílio-ou-dos-indivíduos-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Nível do domicílio ou dos indivíduos?</span></h2>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn6"><p><strong>Peso do domicílio:</strong> embora todas as pessoas do domicílio recebam o mesmo peso, para análises domiciliares, devemos escolher somente uma unidade para representar o domicílio.</p></li></ol></aside></section>
+<section id="nível-do-domicílio-ou-dos-indivíduos-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Nível do domicílio ou dos indivíduos?</span></h2>
 <p>Chave de identificação de cada pessoa e domicílio:</p>
 <ul>
 <li><p><strong>Domicílio</strong>: <span class="math display">\[UPA + V1008 + V1014\]</span></p></li>
@@ -582,11 +641,17 @@ Thiago Cordeiro Almeida
 <li><p><span class="math inline">\(V1008\)</span>: Número de Seleção de Domicílios</p></li>
 <li><p><span class="math inline">\(V1014\)</span>: Número do painel</p></li>
 <li><p><span class="math inline">\(V2003\)</span>: Número de ordem da pessoa no domicílio</p></li>
-</ul></section></section><section><section id="trabalhando-com-dados-de-pesquisa-amostral-complexa-1" class="title-slide slide level1 theme-first center"><h1>Trabalhando com dados de pesquisa amostral complexa</h1>
+</ul>
+</section></section>
+<section>
+<section id="trabalhando-com-dados-de-pesquisa-amostral-complexa-1" class="title-slide slide level1 theme-first center">
+<h1>Trabalhando com dados de pesquisa amostral complexa</h1>
 <div style="text-align: left;">
 <p>Medidas</p>
 </div>
-</section><section id="medidas-de-tendência-central" class="slide level2 smaller"><h2><span class="theme-subtopic">Medidas de Tendência Central</span></h2>
+</section>
+<section id="medidas-de-tendência-central" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Medidas de Tendência Central</span></h2>
 <p>Sinaliza para tendências gerais (médias) de determinada distribuição.</p>
 <p>As medidas de tendência central são bastante utilizadas para sintetizar/resumir os possíveis/prováveis valores a serem encontrados em uma distribuição.</p>
 <ul>
@@ -594,7 +659,10 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Ela nos diz que, a depender da distribuição de nossos valores, em geral, temos grande chance de obtermos, aleatoriamente, um valor que se aproxime do <strong>valor médio</strong>.</p></li>
 <li class="fragment"><p>Por termos uma amostra aleatória e representativa para as unidades geográficas que estudamos, podemos dizer que os valores médios de nossos indicadores representam aqueles valores mais esperados de serem encontrados para a unidade de análise.</p></li>
 <li class="fragment"><p><strong>Uma estimativa é também um valor médio (!)</strong></p></li>
-</ul></section><section id="medidas" class="slide level2 smaller"><h2><span class="theme-subtopic">Medidas</span></h2>
+</ul>
+</section>
+<section id="medidas" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Medidas</span></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Alguns tipos de medidas:</p>
@@ -606,13 +674,18 @@ Thiago Cordeiro Almeida
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+<figure>
+<p><img data-src="images/estimates_normal.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
 </div></div>
-</section><section id="técnicas-de-avaliação-da-qualidade-da-estimativa" class="slide level2 smaller"><h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
+</section>
+<section id="técnicas-de-avaliação-da-qualidade-da-estimativa" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
 <p>Há algumas formas de avaliarmos a qualidade das estimativas através de medidas de variabilidade.</p>
-</section><section id="técnicas-de-avaliação-da-qualidade-da-estimativa-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
+</section>
+<section id="técnicas-de-avaliação-da-qualidade-da-estimativa-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
 <p>Há algumas formas de avaliarmos a qualidade das estimativas através de medidas de variabilidade.</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -629,7 +702,9 @@ Thiago Cordeiro Almeida
 <li><p>Em geral, é multiplicado por 100.</p></li>
 </ul>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn7"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section><section id="técnicas-de-avaliação-da-qualidade-da-estimativa-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn7"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section>
+<section id="técnicas-de-avaliação-da-qualidade-da-estimativa-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Técnicas de avaliação da qualidade da estimativa</span></h2>
 <p>Há algumas formas de avaliarmos a qualidade das estimativas através de medidas de variabilidade.</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -641,25 +716,35 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:70%;">
 <p><strong>Coeficiente de Variação (CV) ou Desvio Padrão Relativo (DPR)</strong><sup>1</sup></p>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/quadro_cv.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/quadro_cv.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn8"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section></section><section><section id="pnadc-no-r" class="title-slide slide level1 theme-first center"><h1>PNADC no R</h1>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.</p></li></ol></aside></section></section>
+<section>
+<section id="pnadc-no-r" class="title-slide slide level1 theme-first center">
+<h1>PNADC no R</h1>
 <div style="text-align: left;">
 
 </div>
-</section><section id="complementos" class="slide level2 smaller"><h2><span class="theme-subtopic">Complementos</span></h2>
+</section>
+<section id="complementos" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Complementos</span></h2>
 <p>Na aula anterior, aprendemos como acessar os microdados no site do IBGE…</p>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/divulgacao_micro_5.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/divulgacao_micro_5.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-</section><section id="section-1" class="slide level2 font-size-small"><h2></h2>
+</section>
+<section id="section-1" class="slide level2 font-size-small">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/divulgacao_complementos.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure>
+<p><img data-src="images/divulgacao_complementos.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -672,17 +757,25 @@ Thiago Cordeiro Almeida
 <li><p><strong>Inputs:</strong> é um arquivo organizado de modo a facilitar a importação dos dados.</p></li>
 </ul>
 </div></div>
-</section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
+</section>
+<section id="pacotes-para-análise-dos-dados-da-pnadc-em-r" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Principais pacotes para facilitar a análise e modelagem dos microdados da PNAD Contínua em R:</p>
 <ul>
 <li class="fragment"><p><code>{PNADcIBGE}</code>: permite baixar e preparar os microdados da PNAD Contínua para análise.</p></li>
-<li class="fragment"><p><a href="http://r-survey.r-forge.r-project.org/survey/">survey</a>: pacote que permite análise e modelagem de dados provenientes de pesquisas com amostras complexas, em geral.</p></li>
-</ul></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
+<li class="fragment"><p><code>{survey}</code>: pacote que permite análise e modelagem de dados provenientes de pesquisas com amostras complexas, em geral.</p></li>
+</ul>
+</section>
+<section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Primeiro, instalamos os pacotes em R<sup>1</sup>…</p>
 <ul>
 <li><p>PNADcIBGE: <code>install.packages("survey")</code></p></li>
 <li><p>survey: <code>install.packages("survey")</code></p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn9"><p><strong>Carregamento de pacotes:</strong> Pacotes devem ser carregados todas as vezes que iniciamos uma sessão do R.</p></li></ol></aside></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn9"><p><strong>Carregamento de pacotes:</strong> Pacotes devem ser carregados todas as vezes que iniciamos uma sessão do R.</p></li></ol></aside></section>
+<section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Depois, carregamos os pacotes de interesse<sup>1</sup>…</p>
 <ul>
 <li>PNADcIBGE:</li>
@@ -696,7 +789,9 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Instalação de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Instalação de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.</p></li></ol></aside></section>
+<section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
 <p><strong>1. Diretamente no R</strong>: É possível baixar diretamente no R, selecionando as variáveis desejadas e já contemplando o plano amostral<sup>1</sup>.</p>
 <p>Exemplo 1: Baixando o banco do segundo trimestre de 2023</p>
 <div class="cell">
@@ -706,7 +801,9 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>dadosPNADc_anual_trimestre_2020 <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(<span class="at">year=</span><span class="dv">2020</span>, <span class="at">topic=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn11"><p><strong>Tempo de download:</strong> A depender da internet, o tempo para download dos dados pode variar bastante…</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn11"><p><strong>Tempo de download:</strong> A depender da internet, o tempo para download dos dados pode variar bastante…</p></li></ol></aside></section>
+<section id="fazendo-download-dos-bancos-de-dados-em-r-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
 <p><strong>2. É possível baixar no site do IBGE e abrir no R</strong>: Neste caso, será necessário atribuir o “input” e os labels das variáveis. Para isso, é necessário que o banco de dados, o arquivo de input (.txt) e o dicionário (xls) estejam todos baixados. Todos esses 3 arquivos (banco de dados, input e dicionário) podem ser baixados no site do IBGE.</p>
 <p>Exemplo de código para isso: Terceiro trimestre de 2016</p>
 <div class="cell">
@@ -728,22 +825,27 @@ Thiago Cordeiro Almeida
 <span id="cb5-16"><a href=""></a><span class="co"># 4 - Atribuindo o plano amostral ao banco de dados</span></span>
 <span id="cb5-17"><a href=""></a>Pnad_3trim_2016 <span class="ot">&lt;-</span> <span class="fu">pnadc_design</span>(Pnad_3trim_2016 )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="exercício-1" class="slide level2 theme-next smaller"><h2>Exercício!</h2>
+</section>
+<section id="exercício-1" class="slide level2 theme-next smaller">
+<h2>Exercício!</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Abram script <code>praticas &gt; Dia 2 - Intro Pnad.R</code>.</p>
 </div><div class="column" style="width:60%;">
-<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
-<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
-</div>
+
 </div></div>
-</section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+</section>
+<section id="isso-é-tudo-para-hoje" class="slide level2 theme-next">
+<h2>Isso é tudo para hoje!</h2>
 <p>Para próxima aula:</p>
 <ol type="1">
 <li class="fragment">Exercícios assíncrono</li>
 <li class="fragment">Leitura de material para aula de hoje (caso não tenha lido)</li>
 <li class="fragment">Leitura de material para a aula seguinte (Ver ementa): validação de estimativas obtidas com a PNADC</li>
-</ol></section><section id="orientações-sobre-o-exercício-12" class="slide level2 theme-next smaller"><h2>Orientações sobre o exercício (1/2)</h2>
+</ol>
+</section>
+<section id="orientações-sobre-o-exercício-12" class="slide level2 theme-next smaller">
+<h2>Orientações sobre o exercício (1/2)</h2>
 <p>Baixar a Pnad trimestral do 1º, 2º, 3º e 4º trimestre de 2021.</p>
 <ol type="1">
 <li>Qual é o número de empregados com carteira assinada em cada um dos trimestres (VD4009)?</li>
@@ -756,7 +858,10 @@ Thiago Cordeiro Almeida
 </ol>
 <ul>
 <li>Faça um gráfico de linha no Excel (ou R) do 1º ao 4º trimestre com o retrato dessa variável em cada um dos trimestres.</li>
-</ul></section><section id="orientações-sobre-o-exercício-22-dica" class="slide level2 theme-next font-size-small"><h2>Orientações sobre o exercício (2/2): Dica…</h2>
+</ul>
+</section>
+<section id="orientações-sobre-o-exercício-22-dica" class="slide level2 theme-next font-size-small">
+<h2>Orientações sobre o exercício (2/2): Dica…</h2>
 <ol type="1">
 <li>Você precisará criar 4 objetos survey. Ou seja, o comando abaixo precisará ser dado 4 vezes, uma para cada trimestre.</li>
 </ol>
@@ -767,7 +872,10 @@ Thiago Cordeiro Almeida
 <ol start="2" type="1">
 <li><p>Além disso, executará o comando <code>svytotal()</code> para cada um desses objetos criados;</p></li>
 <li><p>Para cada um deles, vai gerar um Excel/CSV e depois você irá, manualmente, uni-los em um excel à parte.</p></li>
-</ol></section></section><section id="section-2" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+</ol>
+</section></section>
+<section id="section-2" class="title-slide slide level1 cebrap-fim smaller center">
+<h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -796,7 +904,9 @@ Thiago Cordeiro Almeida
 
 
 </section>
-</div>
+
+
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -804,7 +914,24 @@ Thiago Cordeiro Almeida
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="2.pnadc%20no%20r_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/notes/notes.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/search/search.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="2.pnadc%20no%20r_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="2.pnadc no r_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2.pnadc no r_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -996,42 +1123,84 @@ Thiago Cordeiro Almeida
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+
+    <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
     
+
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
+
     
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
     
+
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
+
     
+
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1198,6 +1367,6 @@ Thiago Cordeiro Almeida
         }
       });
       </script>
-
+    
 
 </body></html>
