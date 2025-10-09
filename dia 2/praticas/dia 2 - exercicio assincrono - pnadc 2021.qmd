@@ -41,6 +41,11 @@ execute:
   message: false
 ---
 
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error=FALSE, warning=FALSE, message=FALSE)
+```
+
+
 # Introdução
 
 Vamos trabalhar com dados dos Trimestres da PNADC para o ano de 2021. A ideia é que trabalhemos com os acumulados dos trimestres e que façamos uma análise de conjuntura de alguns indicadores de mercado de trabalho ao longo do ano de 2021.
@@ -347,7 +352,7 @@ vinculos |>
   )
 ```
 
-![](graf_tipo_vinculos.png){fig-align="center" width="100%" height="100%"}
+![](graf_tipo_vinculos.png){fig-align="center" width="80%" height="50%"}
 
 
 Esse gráfico pode passar por uma série de ajustes e modificações, para ficar ainda mais do jeito que gostaríamos.
