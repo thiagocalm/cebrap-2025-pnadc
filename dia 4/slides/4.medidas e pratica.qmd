@@ -165,19 +165,19 @@ Valores são expressos em números, apresentam quantidades.
 
 Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.
 
--   **Números absolutos**
+-   **Números absolutos** = `svytotal(~VARIAVEL)`
 
--   **Números relativos** (distribuição relativa; composição)
+-   **Números relativos** (distribuição relativa; composição) = `svymean(~VARIAVEL)` 
 
--   **Proporção** (numerador está contido no denominador)
+-   **Proporção** (numerador está contido no denominador) = `svymean(~VARIAVEL)` 
 
--   **Taxa** (numerador **não** está contido no denominador)
+-   **Taxa** (numerador **não** está contido no denominador) = `svyratio(~NUMERADOR, ~DENOMINADOR)`
 
--   **Razão** (divisão de duas grandezas quaisquer)
+-   **Razão** (divisão de duas grandezas quaisquer) = `svyratio(~NUMERADOR, ~DENOMINADOR)`
 
--   **Medidas de tendência central** (média, moda, mediana)
+-   **Medidas de tendência central** (média, moda, mediana) = `svymean(~NUMERADOR, ~DENOMINADOR)`, `svyquantile(~VARIAVEL, quantiles=~c(.5))`
 
--   **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação)
+-   **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação) = `confint(tabela)`, `cv(tabela)`, `SE(tabela)`
 
 ## Tipos de análises {.theme-subtopic .smaller}
 
@@ -335,7 +335,7 @@ A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo �
 ::: nonincremental
 ### Problemática
 
-Qual seria a parcela dos trabalhadores do estado que *potencialmente* seriam beneficiados com imposto zero?
+Qual seria a parcela dos trabalhadores de um específico estado que *potencialmente* seriam beneficiados com imposto zero?
 
 ### Tarefas para responder à problemática
 
@@ -365,7 +365,7 @@ A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo �
 ::: nonincremental
 ### Problemática
 
-Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* seriam **beneficiados com imposto zero**?
+Qual seria a parcela dos **trabalhadores** de um específico **estado** que *potencialmente* seriam **beneficiados com imposto zero**?
 
 ### Tarefas para responder à problemática
 
@@ -389,6 +389,14 @@ Qual seria a parcela dos **trabalhadores** do **estado** que *potencialmente* se
 ## [O caso na PNADC]{.theme-subtopic}
 
 ![](images/pratica_dados.png){fig-align="center" width="120%" height="120%"}
+
+## [O caso na PNADC]{.theme-subtopic}
+
+![](images/pratica_dados.png){fig-align="center" width="120%" height="120%"}
+
+![](images/question.gif){.absolute bottom="0" right="0" width="200" height="200"}
+
+Por que **Visita 1** e não a **Visita 5** ou trimestre?
 
 ##  {.smaller}
 
@@ -424,6 +432,34 @@ Potencialmente beneficiados
 
 ::: {style="text-align: left;"}
 Distintas formas de importação dos dados
+:::
+
+## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
+
+::: nonincremental
+
+```{r,eval=FALSE}
+ Pnad_2022_2s <- get_pnadc(
+           
+   year = 2022,# obrigatório de ser declarado 
+   quarter/interview/topic = , # 
+   design = TRUE, # opcional, utilizado caso queira aplicar o plano amostral complexo aos dados
+   vars = c("codigo_variavel1","codigo_variavel2", "codigo_variavelN"), # opcional
+   labels = TRUE, # é o default, para rotular os dados
+   deflator = TRUE # é o default, para incluir variável de deflacionamento direto do IBGE
+)
+```
+
+O que vai, basicamente variar é o argumento `quarter/interview/topic`.
+
+- Devemos escolher um deles, a depender do nosso interesse de análise.
+
+- Acumulado na entrevista: `interview`;
+
+- Acumulado no trimestre: `quarter`
+
+- Suplemento acumulado no trimestre: `topic`
+
 :::
 
 ## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
@@ -528,6 +564,7 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 
 :::::: columns
 ::: {.column width="40%"}
+Abram o arquivo: `dia 4 > praticas > codigos > Aula 4 - roteiro completo.R`
 :::
 
 :::: {.column width="60%"}
@@ -556,10 +593,104 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 # Tópico complementar {.theme-first}
 
 ::: {style="text-align: left;"}
-...
+Análise a nível do domicílio!
 :::
 
-## [...]{.theme-subtopic} {.smaller}
+## [Aspectos conceituais importantes]{.theme-subtopic} {.smaller}
+
+Estamos falando sobre domicílios, não sobre famílias!
+
+## [Aspectos conceituais importantes]{.theme-subtopic} {.smaller}
+
+Estamos falando sobre domicílios, não sobre famílias!
+
+Mais do que isso:
+
+- Estamos tratando de Domicílios Particulares e Permanentes Ocupados (DPPOs)
+
+## [Aspectos conceituais importantes]{.theme-subtopic} {.smaller}
+
+Estamos falando sobre domicílios, não sobre famílias!
+
+Mais do que isso:
+
+- Estamos tratando de Domicílios Particulares e Permanentes Ocupados (DPPOs)
+
+O que fica de fora dessa definição?
+
+- Domicílios de temporada
+
+- Domicílios improvisados
+
+- *População não domiciliada*
+
+## [Formas de análises domiciliares usando a PNADC]{.theme-subtopic} {.smaller}
+
+Identificação do domicílio em determinada visita ou trimestre
+
+$$UPA + V1008 + V1014$$
+
+Em que:
+
+- UPA: Unidade Primária de Amostragem
+
+- V1008: Número de seleção do domicílio
+
+- V1014: Número do painel
+
+## [Formas de análises domiciliares usando a PNADC]{.theme-subtopic} {.smaller}
+
+Peso a se utilizar para o domicílio
+
+- Sabemos (Aula 2) que o peso é o mesmo para todos os indivíduos de um determinado domicílio.
+
+- Porém, as características dos indivíduos não serão as mesmas.
+
+- Portanto, a depender da análise a ser realizada, pode impactar nos resultados obtidos.
+
+## [Exemplos de análise a nível domiciliar]{.theme-subtopic} {.smaller}
+
+
+
+::::: columns
+::: {.column width="70%"}
+![](images/analise_domicilio_ex1.png){fig-align="center" width="100%" height="100%"}
+:::
+
+::: {.column width="30%"}
+**Exemplo 1**: Utilizando o bloco de variáveis de habitação (acumulado visita 1)
+
+- Todos os indivíduos do domicílio recebem a mesma resposta.
+
+- Independente do peso que se utilize, estimativas não serão afetadas.
+:::
+:::::
+
+## [Exemplos de análise a nível domiciliar]{.theme-subtopic} {.smaller}
+
+::::: columns
+::: {.column width="70%"}
+![](images/analise_domicilio_ex2.png){fig-align="center" width="100%" height="100%"}
+:::
+
+::: {.column width="30%"}
+**Exemplo 2**: Desagregando por característica dos moradores do domicílio^[Fonte: Fundação João Pinheiro. [Déficit Habitacional no Brasil](https://fjp.mg.gov.br/deficit-habitacional-no-brasil/).].
+
+- Cada indivíduo pode ter características distintas.
+
+- Escolha do indivíduo a representar a característica do domicílio vai afetar os resultados obtidos.
+:::
+:::::
+
+## [O Peso importa]{.theme-subtopic} {.smaller}
+
+Quais estratégias analíticas podemos recorrer?
+
+- **Uso do responsavel do domicílio:** usualmente feita^[Ver [Almeida et al. (2023)](https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0) para implicações desse uso];
+
+- **Uso de valor médio do domicílio:** média da renda? idade média?
+
+- **Economia de escala intradomiciliar:** diferentes pessoas do domicílio "pesariam" de forma distinta para o valor do domicílio.
 
 # Próximos passos {.theme-first}
 
@@ -567,6 +698,8 @@ Variáveis iniciadas com $S$: ver sempre o dicionário
 :::
 
 ## [Recapitulando]{.theme-subtopic} {.smaller}
+
+::: nonincremental
 
 O que vimos no curso:
 
@@ -586,11 +719,15 @@ O que vimos no curso:
 
 -   Formas de importação de dados da PNADC em R
 
--   Uso de suplementos da PNADC em R
-
 -   Manipulações e análises da PNADC orientada a problemas empíricos
 
+-   Tópico complementar: *análises domiciliares*
+
+:::
+
 ## [Na PNADC]{.theme-subtopic} {.font-size-small}
+
+::: nonincremental
 
 -   Limitações de análises
 
@@ -620,7 +757,11 @@ O que vimos no curso:
 
 -   ...
 
+:::
+
 ## [No R]{.theme-subtopic} {.smaller}
+
+::: nonincremental
 
 -   Gramática Tydiverse para manipulação de dados
 
@@ -634,19 +775,35 @@ O que vimos no curso:
 
 -   ...
 
-## [Outros cursos do cebrap.lab]{.theme-subtopic} {.smaller}
+:::
 
-Indicadores sociais e territoriais: como construir e utilizar? - Em novembro
+## [Outros cursos do cebrap.lab]{.theme-subtopic}
 
-Análise quantitativa de texto com R - Em novembro
+::: nonincremental
+
+- Indicadores sociais e territoriais: como construir e utilizar? - Em novembro
+
+- Análise quantitativa de texto com R - Em novembro
+
+:::
 
 ## Isso é tudo para hoje! {.theme-next}
 
 ## Isso é tudo para hoje! {.theme-next}
+
+::: nonincremental
 
 Exercício final!
 
-...
+- Arquivo: `dia 5 > Exercício final.pdf`
+
+- Relatório *simples* explorando como um determinado fenômeno de interesse pode ser estudado com a PNADC.
+
+  - Foque aqui em descrever qual tipo de dado da PNADC seria adequado e o motivo, potencialidades e limitações.
+
+- Prazo de envio: 25/10.
+
+:::
 
 #  {.cebrap-fim .smaller}
 

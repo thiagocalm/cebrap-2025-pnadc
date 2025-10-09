@@ -1,5 +1,5 @@
 #' --------------------------------------------------
-#' Aula 4 - PNADC em R
+#' Aula 4 - PNADC em R - Aplicação: Imposto zero!
 #' --------------------------------------------------
 
 
@@ -20,15 +20,29 @@ library(survey)
 
 # Importação da base de dados ---------------------------------------------
 
+###
 # Importação da base de dados 2024 concentrada na visita 1
+###
 
-pnad_2024_v1 <- get_pnadc(
-  year = 2024,
-  interview = 1,
-  labels = FALSE
+
+# baixando os dados diretamente do ibge
+
+# pnad_2024_v1 <- get_pnadc(
+#   year = 2024,
+#   interview = 1,
+#   labels = FALSE
+# )
+
+# importando offline (lembre-se de configurar o working directory antes!!!)
+
+pnad_2024_v1 <- read_pnadc(
+  microdata = file.path(here::here(),"dia 4","praticas","PNADC_2024_visita1_20250822.zip"),
+  input_txt = file.path(here::here(),"dia 4","praticas","input_PNADC_2024_visita1_20250822.txt")
 )
 
-# Criacao de variaveis ----------------------------------------------------
+pnad_2024_v1 <- pnadc_design(pnad_2024_v1) # aplicando o plano amostral
+
+# Criacao de variaveis derivadas ------------------------------------------
 
 # Potencial isento
 
@@ -126,8 +140,9 @@ tabela_5 # visualizando tabela
 
 # Avaliando nossas estimativas principais
 
-confint(tabela_5)
-cv(object=tabela_5) * 100
+confint(tabela_5) # intervalo de confianca
+
+cv(object=tabela_5) * 100 # coeficiente de variacao
 
 
 # Extra! ------------------------------------------------------------------

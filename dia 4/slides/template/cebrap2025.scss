@@ -10,7 +10,7 @@
 
 // Include theme-specific fonts
 @import url(./fonts/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 $font-family-sans-serif: Lato, sans-serif !default;
 
@@ -53,6 +53,10 @@ $presentation-heading-font-weight: normal !default;
 
 // background
 $body-bg: $base3 !default;
+
+// inline code
+$code-bg: #efefef;
+$code-color: $orange;
 
 $overlayElementBgColor: 0, 0, 0 !default;
 $overlayElementFgColor: 240, 240, 240 !default;
@@ -131,7 +135,7 @@ $overlayElementFgColor: 240, 240, 240 !default;
   }
   h4, h5 {
     margin-left: 100px;
-    color: $orange !important;
+   // color: $orange !important;
     text-align: left;
   }
 }

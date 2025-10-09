@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-10-06">
+<meta name="dcterms.date" content="2025-10-09">
 <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -96,7 +96,7 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="4.medidas%20e%20pratica_files/libs/revealjs/dist/theme/quarto-87beaf0f1ecf0816fc9ba1b966f85224.css">
+<link rel="stylesheet" href="4.medidas%20e%20pratica_files/libs/revealjs/dist/theme/quarto-81d760842bcca669b7b3028d6b8c3cd6.css">
 <link href="4.medidas%20e%20pratica_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="4.medidas%20e%20pratica_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="4.medidas%20e%20pratica_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -208,7 +208,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">October 6, 2025</p>
+  <p class="date">October 9, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -326,13 +326,13 @@ Thiago Cordeiro Almeida
 </section><section id="tipos-de-medidas" class="slide level2 smaller"><h2><span class="theme-subtopic">Tipos de medidas</span></h2>
 <p>Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.</p>
 <ul>
-<li class="fragment"><p><strong>Números absolutos</strong></p></li>
-<li class="fragment"><p><strong>Números relativos</strong> (distribuição relativa; composição)</p></li>
-<li class="fragment"><p><strong>Proporção</strong> (numerador está contido no denominador)</p></li>
-<li class="fragment"><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador)</p></li>
-<li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer)</p></li>
-<li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana)</p></li>
-<li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação)</p></li>
+<li class="fragment"><p><strong>Números absolutos</strong> = <code>svytotal(~VARIAVEL)</code></p></li>
+<li class="fragment"><p><strong>Números relativos</strong> (distribuição relativa; composição) = <code>svymean(~VARIAVEL)</code></p></li>
+<li class="fragment"><p><strong>Proporção</strong> (numerador está contido no denominador) = <code>svymean(~VARIAVEL)</code></p></li>
+<li class="fragment"><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador) = <code>svyratio(~NUMERADOR, ~DENOMINADOR)</code></p></li>
+<li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer) = <code>svyratio(~NUMERADOR, ~DENOMINADOR)</code></p></li>
+<li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana) = <code>svymean(~NUMERADOR, ~DENOMINADOR)</code>, <code>svyquantile(~VARIAVEL, quantiles=~c(.5))</code></p></li>
+<li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação) = <code>confint(tabela)</code>, <code>cv(tabela)</code>, <code>SE(tabela)</code></p></li>
 </ul></section><section id="tipos-de-análises" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
 <p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
 <div class="columns">
@@ -417,7 +417,7 @@ Thiago Cordeiro Almeida
 <div class="columns">
 <div class="column" style="width:70%;">
 <h3 id="problemática">Problemática</h3>
-<p>Qual seria a parcela dos trabalhadores do estado que <em>potencialmente</em> seriam beneficiados com imposto zero?</p>
+<p>Qual seria a parcela dos trabalhadores de um específico estado que <em>potencialmente</em> seriam beneficiados com imposto zero?</p>
 <h3 id="tarefas-para-responder-à-problemática">Tarefas para responder à problemática</h3>
 <ol type="1">
 <li><p>Número de pessoas ocupadas no Brasil.</p></li>
@@ -437,7 +437,7 @@ Thiago Cordeiro Almeida
 <div class="columns">
 <div class="column" style="width:70%;">
 <h3 id="problemática-1">Problemática</h3>
-<p>Qual seria a parcela dos <strong>trabalhadores</strong> do <strong>estado</strong> que <em>potencialmente</em> seriam <strong>beneficiados com imposto zero</strong>?</p>
+<p>Qual seria a parcela dos <strong>trabalhadores</strong> de um específico <strong>estado</strong> que <em>potencialmente</em> seriam <strong>beneficiados com imposto zero</strong>?</p>
 <h3 id="tarefas-para-responder-à-problemática-1">Tarefas para responder à problemática</h3>
 <ol type="1">
 <li><p>Número de pessoas ocupadas no Brasil.</p></li>
@@ -457,6 +457,13 @@ Thiago Cordeiro Almeida
 <figure><p><img data-src="images/pratica_dados.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
 </figure>
 </div>
+</section><section id="o-caso-na-pnadc-1" class="slide level2"><h2><span class="theme-subtopic">O caso na PNADC</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/pratica_dados.png" class="quarto-figure quarto-figure-center" style="width:120.0%;height:120.0%"></p>
+</figure>
+</div>
+<p><img data-src="images/question.gif" class="absolute" style="bottom: 0px; right: 0px; width: 200px; height: 200px; "></p>
+<p>Por que <strong>Visita 1</strong> e não a <strong>Visita 5</strong> ou trimestre?</p>
 </section><section id="section" class="slide level2 smaller"><h2></h2>
 <h3 id="criação-de-variáveis">Criação de variáveis</h3>
 <div class="columns">
@@ -490,19 +497,37 @@ Thiago Cordeiro Almeida
 <p>Distintas formas de importação dos dados</p>
 </div>
 </section><section id="formas-de-importação-dos-dados" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>1. Importação de dados trimestrais:</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a> Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
 <span id="cb1-2"><a href=""></a>           </span>
 <span id="cb1-3"><a href=""></a>   <span class="at">year =</span> <span class="dv">2022</span>,<span class="co"># obrigatório de ser declarado </span></span>
-<span id="cb1-4"><a href=""></a>   <span class="at">quarter =</span> <span class="dv">2</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
+<span id="cb1-4"><a href=""></a>   quarter<span class="sc">/</span>interview<span class="sc">/</span><span class="at">topic =</span> , <span class="co"># </span></span>
 <span id="cb1-5"><a href=""></a>   <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
 <span id="cb1-6"><a href=""></a>   <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
 <span id="cb1-7"><a href=""></a>   <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
 <span id="cb1-8"><a href=""></a>   <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
 <span id="cb1-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O que vai, basicamente variar é o argumento <code>quarter/interview/topic</code>.</p>
+<ul>
+<li><p>Devemos escolher um deles, a depender do nosso interesse de análise.</p></li>
+<li><p>Acumulado na entrevista: <code>interview</code>;</p></li>
+<li><p>Acumulado no trimestre: <code>quarter</code></p></li>
+<li><p>Suplemento acumulado no trimestre: <code>topic</code></p></li>
+</ul></section><section id="formas-de-importação-dos-dados-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><strong>1. Importação de dados trimestrais:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a> Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
+<span id="cb2-2"><a href=""></a>           </span>
+<span id="cb2-3"><a href=""></a>   <span class="at">year =</span> <span class="dv">2022</span>,<span class="co"># obrigatório de ser declarado </span></span>
+<span id="cb2-4"><a href=""></a>   <span class="at">quarter =</span> <span class="dv">2</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
+<span id="cb2-5"><a href=""></a>   <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
+<span id="cb2-6"><a href=""></a>   <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
+<span id="cb2-7"><a href=""></a>   <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
+<span id="cb2-8"><a href=""></a>   <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
+<span id="cb2-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
@@ -510,35 +535,14 @@ Thiago Cordeiro Almeida
 </figure>
 </div>
 </div></div>
-</section><section id="formas-de-importação-dos-dados-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
+</section><section id="formas-de-importação-dos-dados-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
 <p><strong>2. Importação dos dados ACUMULADOS em determinada visita:</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
-<span id="cb2-2"><a href=""></a>  <span class="at">year =</span> <span class="dv">2022</span>, <span class="co"># obrigatório de ser declarado</span></span>
-<span id="cb2-3"><a href=""></a>  <span class="at">interview =</span> <span class="dv">1</span>, <span class="co"># utilizado somente quando importaremos dados em determinada visita</span></span>
-<span id="cb2-4"><a href=""></a>  <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
-<span id="cb2-5"><a href=""></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
-<span id="cb2-6"><a href=""></a>  <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
-<span id="cb2-7"><a href=""></a>  <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
-<span id="cb2-8"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/importacao_visita.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
-</figure>
-</div>
-</div></div>
-</section><section id="formas-de-importação-dos-dados-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>3. Importação de SUPLEMENTO de dados ACUMULADOS em determinado trimestre:</strong></p>
-<p>Variáveis iniciadas com <span class="math inline">\(V\)</span> ou <span class="math inline">\(VI\)</span>: ver sempre o dicionário</p>
-<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
 <span id="cb3-2"><a href=""></a>  <span class="at">year =</span> <span class="dv">2022</span>, <span class="co"># obrigatório de ser declarado</span></span>
-<span id="cb3-3"><a href=""></a>  <span class="at">topic =</span> <span class="dv">4</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
+<span id="cb3-3"><a href=""></a>  <span class="at">interview =</span> <span class="dv">1</span>, <span class="co"># utilizado somente quando importaremos dados em determinada visita</span></span>
 <span id="cb3-4"><a href=""></a>  <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
 <span id="cb3-5"><a href=""></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
 <span id="cb3-6"><a href=""></a>  <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
@@ -547,25 +551,46 @@ Thiago Cordeiro Almeida
 </div>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/importacao_suplemento_trimestre.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+<figure><p><img data-src="images/importacao_visita.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
 </div></div>
 </section><section id="formas-de-importação-dos-dados-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
+<p><strong>3. Importação de SUPLEMENTO de dados ACUMULADOS em determinado trimestre:</strong></p>
+<p>Variáveis iniciadas com <span class="math inline">\(V\)</span> ou <span class="math inline">\(VI\)</span>: ver sempre o dicionário</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
+<span id="cb4-2"><a href=""></a>  <span class="at">year =</span> <span class="dv">2022</span>, <span class="co"># obrigatório de ser declarado</span></span>
+<span id="cb4-3"><a href=""></a>  <span class="at">topic =</span> <span class="dv">4</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
+<span id="cb4-4"><a href=""></a>  <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
+<span id="cb4-5"><a href=""></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
+<span id="cb4-6"><a href=""></a>  <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
+<span id="cb4-7"><a href=""></a>  <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
+<span id="cb4-8"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/importacao_suplemento_trimestre.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div></div>
+</section><section id="formas-de-importação-dos-dados-4" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <p><strong>4. Importação dos dados ACUMULADOS em determinado trimestre para suplementos específicos:</strong></p>
 <p>Variáveis iniciadas com <span class="math inline">\(S\)</span>: ver sempre o dicionário</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a> Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
-<span id="cb4-2"><a href=""></a>   <span class="at">year =</span> <span class="dv">2022</span>, <span class="co"># obrigatório de ser declarado</span></span>
-<span id="cb4-3"><a href=""></a>   <span class="at">topic =</span> <span class="dv">4</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
-<span id="cb4-4"><a href=""></a>   <span class="at">selected =</span> <span class="cn">TRUE</span>, <span class="co"># utilizado para suplementos coletados para alguns moradores</span></span>
-<span id="cb4-5"><a href=""></a>   <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
-<span id="cb4-6"><a href=""></a>   <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
-<span id="cb4-7"><a href=""></a>   <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
-<span id="cb4-8"><a href=""></a>   <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
-<span id="cb4-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a> Pnad_2022_2s <span class="ot">&lt;-</span> <span class="fu">get_pnadc</span>(</span>
+<span id="cb5-2"><a href=""></a>   <span class="at">year =</span> <span class="dv">2022</span>, <span class="co"># obrigatório de ser declarado</span></span>
+<span id="cb5-3"><a href=""></a>   <span class="at">topic =</span> <span class="dv">4</span>, <span class="co"># utilizado somente quando importaremos dados em determinado trimestre</span></span>
+<span id="cb5-4"><a href=""></a>   <span class="at">selected =</span> <span class="cn">TRUE</span>, <span class="co"># utilizado para suplementos coletados para alguns moradores</span></span>
+<span id="cb5-5"><a href=""></a>   <span class="at">design =</span> <span class="cn">TRUE</span>, <span class="co"># opcional, utilizado caso queira aplicar o plano amostral complexo aos dados</span></span>
+<span id="cb5-6"><a href=""></a>   <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"codigo_variavel1"</span>,<span class="st">"codigo_variavel2"</span>, <span class="st">"codigo_variavelN"</span>), <span class="co"># opcional</span></span>
+<span id="cb5-7"><a href=""></a>   <span class="at">labels =</span> <span class="cn">TRUE</span>, <span class="co"># é o default, para rotular os dados</span></span>
+<span id="cb5-8"><a href=""></a>   <span class="at">deflator =</span> <span class="cn">TRUE</span> <span class="co"># é o default, para incluir variável de deflacionamento direto do IBGE</span></span>
+<span id="cb5-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
@@ -576,7 +601,7 @@ Thiago Cordeiro Almeida
 </section><section id="vamos-para-o-r" class="slide level2 theme-next smaller"><h2>Vamos para o R!</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-
+<p>Abram o arquivo: <code>dia 4 &gt; praticas &gt; codigos &gt; Aula 4 - roteiro completo.R</code></p>
 </div><div class="column" style="width:60%;">
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
@@ -593,66 +618,140 @@ Thiago Cordeiro Almeida
 </div>
 </section></section><section><section id="tópico-complementar" class="title-slide slide level1 theme-first center"><h1>Tópico complementar</h1>
 <div style="text-align: left;">
-<p>…</p>
+<p>Análise a nível do domicílio!</p>
 </div>
-</section><section id="section-1" class="slide level2 smaller"><h2><span class="theme-subtopic">…</span></h2>
-</section></section><section><section id="próximos-passos" class="title-slide slide level1 theme-first center"><h1>Próximos passos</h1>
+</section><section id="aspectos-conceituais-importantes" class="slide level2 smaller"><h2><span class="theme-subtopic">Aspectos conceituais importantes</span></h2>
+<p>Estamos falando sobre domicílios, não sobre famílias!</p>
+</section><section id="aspectos-conceituais-importantes-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Aspectos conceituais importantes</span></h2>
+<p>Estamos falando sobre domicílios, não sobre famílias!</p>
+<p>Mais do que isso:</p>
+<ul>
+<li class="fragment">Estamos tratando de Domicílios Particulares e Permanentes Ocupados (DPPOs)</li>
+</ul></section><section id="aspectos-conceituais-importantes-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Aspectos conceituais importantes</span></h2>
+<p>Estamos falando sobre domicílios, não sobre famílias!</p>
+<p>Mais do que isso:</p>
+<ul>
+<li class="fragment">Estamos tratando de Domicílios Particulares e Permanentes Ocupados (DPPOs)</li>
+</ul>
+<p>O que fica de fora dessa definição?</p>
+<ul>
+<li class="fragment"><p>Domicílios de temporada</p></li>
+<li class="fragment"><p>Domicílios improvisados</p></li>
+<li class="fragment"><p><em>População não domiciliada</em></p></li>
+</ul></section><section id="formas-de-análises-domiciliares-usando-a-pnadc" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de análises domiciliares usando a PNADC</span></h2>
+<p>Identificação do domicílio em determinada visita ou trimestre</p>
+<p><span class="math display">\[UPA + V1008 + V1014\]</span></p>
+<p>Em que:</p>
+<ul>
+<li class="fragment"><p>UPA: Unidade Primária de Amostragem</p></li>
+<li class="fragment"><p>V1008: Número de seleção do domicílio</p></li>
+<li class="fragment"><p>V1014: Número do painel</p></li>
+</ul></section><section id="formas-de-análises-domiciliares-usando-a-pnadc-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de análises domiciliares usando a PNADC</span></h2>
+<p>Peso a se utilizar para o domicílio</p>
+<ul>
+<li class="fragment"><p>Sabemos (Aula 2) que o peso é o mesmo para todos os indivíduos de um determinado domicílio.</p></li>
+<li class="fragment"><p>Porém, as características dos indivíduos não serão as mesmas.</p></li>
+<li class="fragment"><p>Portanto, a depender da análise a ser realizada, pode impactar nos resultados obtidos.</p></li>
+</ul></section><section id="exemplos-de-análise-a-nível-domiciliar" class="slide level2 smaller"><h2><span class="theme-subtopic">Exemplos de análise a nível domiciliar</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/analise_domicilio_ex1.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<p><strong>Exemplo 1</strong>: Utilizando o bloco de variáveis de habitação (acumulado visita 1)</p>
+<ul>
+<li class="fragment"><p>Todos os indivíduos do domicílio recebem a mesma resposta.</p></li>
+<li class="fragment"><p>Independente do peso que se utilize, estimativas não serão afetadas.</p></li>
+</ul>
+</div></div>
+</section><section id="exemplos-de-análise-a-nível-domiciliar-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Exemplos de análise a nível domiciliar</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/analise_domicilio_ex2.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<p><strong>Exemplo 2</strong>: Desagregando por característica dos moradores do domicílio<sup>1</sup>.</p>
+<ul>
+<li class="fragment"><p>Cada indivíduo pode ter características distintas.</p></li>
+<li class="fragment"><p>Escolha do indivíduo a representar a característica do domicílio vai afetar os resultados obtidos.</p></li>
+</ul>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Fonte: Fundação João Pinheiro. <a href="https://fjp.mg.gov.br/deficit-habitacional-no-brasil/">Déficit Habitacional no Brasil</a>.</p></li></ol></aside></section><section id="o-peso-importa" class="slide level2 smaller"><h2><span class="theme-subtopic">O Peso importa</span></h2>
+<p>Quais estratégias analíticas podemos recorrer?</p>
+<ul>
+<li class="fragment"><p><strong>Uso do responsavel do domicílio:</strong> usualmente feita<sup>1</sup>;</p></li>
+<li class="fragment"><p><strong>Uso de valor médio do domicílio:</strong> média da renda? idade média?</p></li>
+<li class="fragment"><p><strong>Economia de escala intradomiciliar:</strong> diferentes pessoas do domicílio “pesariam” de forma distinta para o valor do domicílio.</p></li>
+</ul><aside><ol class="aside-footnotes"><li id="fn3"><p>Ver <a href="https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0">Almeida et al.&nbsp;(2023)</a> para implicações desse uso</p></li></ol></aside></section></section><section><section id="próximos-passos" class="title-slide slide level1 theme-first center"><h1>Próximos passos</h1>
 <div style="text-align: left;">
 
 </div>
 </section><section id="recapitulando" class="slide level2 smaller"><h2><span class="theme-subtopic">Recapitulando</span></h2>
 <p>O que vimos no curso:</p>
 <ul>
-<li class="fragment"><p>Finalidades da PNADC</p></li>
-<li class="fragment"><p>Mudanças entre PNAD e PNADC e as vantagens da nova pesquisa</p></li>
-<li class="fragment"><p>SIPD e construção da Amostra Mestra</p></li>
-<li class="fragment"><p>Operacionalização da coleta da PNADC</p></li>
-<li class="fragment"><p>Estratégias de divulgação da pesquisa</p></li>
-<li class="fragment"><p>R e RStudio para análise de dados</p></li>
-<li class="fragment"><p>Técnicas de avaliação da qualidade das estimativas</p></li>
-<li class="fragment"><p>Formas de importação de dados da PNADC em R</p></li>
-<li class="fragment"><p>Uso de suplementos da PNADC em R</p></li>
-<li class="fragment"><p>Manipulações e análises da PNADC orientada a problemas empíricos</p></li>
+<li><p>Finalidades da PNADC</p></li>
+<li><p>Mudanças entre PNAD e PNADC e as vantagens da nova pesquisa</p></li>
+<li><p>SIPD e construção da Amostra Mestra</p></li>
+<li><p>Operacionalização da coleta da PNADC</p></li>
+<li><p>Estratégias de divulgação da pesquisa</p></li>
+<li><p>R e RStudio para análise de dados</p></li>
+<li><p>Técnicas de avaliação da qualidade das estimativas</p></li>
+<li><p>Formas de importação de dados da PNADC em R</p></li>
+<li><p>Manipulações e análises da PNADC orientada a problemas empíricos</p></li>
+<li><p>Tópico complementar: <em>análises domiciliares</em></p></li>
 </ul></section><section id="na-pnadc" class="slide level2 font-size-small"><h2><span class="theme-subtopic">Na PNADC</span></h2>
 <ul>
-<li class="fragment">
+<li>
 <p>Limitações de análises</p>
 <ul>
-<li class="fragment">Pandemia de Covid-19 e qualidade das estimativas</li>
+<li>Pandemia de Covid-19 e qualidade das estimativas</li>
 </ul>
 </li>
-<li class="fragment"><p>Diferentes estimativas para diferentes pesos adotados</p></li>
-<li class="fragment"><p>Compatibilização com outras bases de dados públicas ou privadas</p></li>
-<li class="fragment"><p>Análises em nível micro (geograficamente)</p></li>
-<li class="fragment"><p>Compatibilização da série PNAD (antiga) e PNADC</p></li>
-<li class="fragment"><p>Longitudinalização da PNADC</p></li>
-<li class="fragment"><p>O que o Censo 2022 traz de novidade?</p></li>
-<li class="fragment">
+<li><p>Diferentes estimativas para diferentes pesos adotados</p></li>
+<li><p>Compatibilização com outras bases de dados públicas ou privadas</p></li>
+<li><p>Análises em nível micro (geograficamente)</p></li>
+<li><p>Compatibilização da série PNAD (antiga) e PNADC</p></li>
+<li><p>Longitudinalização da PNADC</p></li>
+<li><p>O que o Censo 2022 traz de novidade?</p></li>
+<li>
 <p>Tópicos complementares de análise</p>
 <ul>
-<li class="fragment"><p>Classificações de atividade econômica e ocupação (CNAE e CBO)</p></li>
-<li class="fragment"><p>Ponderação manual dos dados da PNADC após manipulação (<a href="https://github.com/thiagocalm/Idoso_raca_mt">exemplo</a>)</p></li>
-<li class="fragment"><p>Trabalhando com deflacionamentos na PNADC</p></li>
-<li class="fragment"><p>Trabalhando com análises a nível domiciliar com PNADC</p></li>
+<li><p>Classificações de atividade econômica e ocupação (CNAE e CBO)</p></li>
+<li><p>Ponderação manual dos dados da PNADC após manipulação (<a href="https://github.com/thiagocalm/Idoso_raca_mt">exemplo</a>)</p></li>
+<li><p>Trabalhando com deflacionamentos na PNADC</p></li>
+<li><p>Trabalhando com análises a nível domiciliar com PNADC</p></li>
 </ul>
 </li>
-<li class="fragment"><p>…</p></li>
+<li><p>…</p></li>
 </ul></section><section id="no-r" class="slide level2 smaller"><h2><span class="theme-subtopic">No R</span></h2>
 <ul>
-<li class="fragment"><p>Gramática Tydiverse para manipulação de dados</p></li>
-<li class="fragment"><p>Gráficos em <code>{ggplot}</code></p></li>
-<li class="fragment"><p>Criando suas próprias funções em R</p></li>
-<li class="fragment"><p>Mapas em R</p></li>
-<li class="fragment"><p>Automatização e reprodutibilidade de processos</p></li>
-<li class="fragment"><p>…</p></li>
-</ul></section><section id="outros-cursos-do-cebrap.lab" class="slide level2 smaller"><h2><span class="theme-subtopic">Outros cursos do cebrap.lab</span></h2>
-<p>Indicadores sociais e territoriais: como construir e utilizar? - Em novembro</p>
-<p>Análise quantitativa de texto com R - Em novembro</p>
-</section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+<li><p>Gramática Tydiverse para manipulação de dados</p></li>
+<li><p>Gráficos em <code>{ggplot}</code></p></li>
+<li><p>Criando suas próprias funções em R</p></li>
+<li><p>Mapas em R</p></li>
+<li><p>Automatização e reprodutibilidade de processos</p></li>
+<li><p>…</p></li>
+</ul></section><section id="outros-cursos-do-cebrap.lab" class="slide level2"><h2><span class="theme-subtopic">Outros cursos do cebrap.lab</span></h2>
+<ul>
+<li><p>Indicadores sociais e territoriais: como construir e utilizar? - Em novembro</p></li>
+<li><p>Análise quantitativa de texto com R - Em novembro</p></li>
+</ul></section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
 </section><section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
 <p>Exercício final!</p>
-<p>…</p>
-</section></section><section id="section-2" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+<ul>
+<li><p>Arquivo: <code>dia 5 &gt; Exercício final.pdf</code></p></li>
+<li>
+<p>Relatório <em>simples</em> explorando como um determinado fenômeno de interesse pode ser estudado com a PNADC.</p>
+<ul>
+<li>Foque aqui em descrever qual tipo de dado da PNADC seria adequado e o motivo, potencialidades e limitações.</li>
+</ul>
+</li>
+<li><p>Prazo de envio: 25/10.</p></li>
+</ul></section></section><section id="section-1" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
 <div class="column" style="width:50%;">
