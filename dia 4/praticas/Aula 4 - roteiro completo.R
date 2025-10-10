@@ -2,11 +2,10 @@
 #' Aula 4 - PNADC em R - Aplicação: Imposto zero!
 #' --------------------------------------------------
 
-
 # Importacao de biblioteca ------------------------------------------------
 
-install.packages("PNADcIBGE")
-install.packages("survey")
+#install.packages("PNADcIBGE")
+#install.packages("survey")
 
 library(PNADcIBGE)
 library(survey)
@@ -14,7 +13,7 @@ library(survey)
 
 # Variáveis que utilizaremos
 # UF
-# VD4002 - Condicao de ocupacao (VD4002 == 1, ocupada)
+# VD4002 - Condicao de ocupacao (VD4002 == 1, população ocupada)
 # VD4017 - Rendimento mensal efetivo do trabalho principal
 # V2009 - Idade
 
@@ -30,17 +29,29 @@ library(survey)
 # pnad_2024_v1 <- get_pnadc(
 #   year = 2024,
 #   interview = 1,
-#   labels = FALSE
+#   labels = FALSE,
+#   design = TRUE # ja baixar com o plano amostral implementado
 # )
 
 # importando offline (lembre-se de configurar o working directory antes!!!)
 
+getwd() # antigo diretorio
+setwd(file.path(here::here(),"dia 4","praticas")) # configurando novo diretorio
+getwd() # novo diretorio configurado!
+
 pnad_2024_v1 <- read_pnadc(
-  microdata = file.path(here::here(),"dia 4","praticas","PNADC_2024_visita1_20250822.zip"),
-  input_txt = file.path(here::here(),"dia 4","praticas","input_PNADC_2024_visita1_20250822.txt")
+  microdata = "PNADC_2024_visita1_20250822.zip", # importando com arquivo 'zipado'
+  # microdata = "PNADC_2024_visita1_20250822.txt", # importando com arquivo 'unzipado'
+  input_txt = "input_PNADC_2024_visita1_20250822.txt"
 )
 
+# Deve ser rodado quando importamos os dados 'manualmente'
+
+class(pnad_2024_v1) # classe ainda é 'dataframe'
+
 pnad_2024_v1 <- pnadc_design(pnad_2024_v1) # aplicando o plano amostral
+
+class(pnad_2024_v1) # classe mudou para "svyrep.design"
 
 # Criacao de variaveis derivadas ------------------------------------------
 
@@ -55,12 +66,16 @@ pnad_2024_v1$variables <- transform(
   )
 )
 
+class(pnad_2024_v1$variables$renda_isencao) # verificando se a variavel foi criada
+
 # Variavel de soma
 
 pnad_2024_v1$variables <- transform(
   pnad_2024_v1$variables,
   valor = 1
 )
+
+class(pnad_2024_v1$variables$valor) # verificando se a variavel foi criada
 
 ## Criando uma base um pouco menos para o nosso publico
 
@@ -80,9 +95,9 @@ invisible(gc())
 # 1 - Numero de pessoas ocupadas
 
 tabela_1 <- svytotal(
-  ~valor,
-  design = pnad_ocupados,
-  na.rm = TRUE
+  x = ~valor, # argumento da variavel de interesse
+  design = pnad_ocupados, # base de dados com o plano amostral
+  na.rm = TRUE # excluindo valores ausentes, NA
 )
 
 tabela_1 # visualizando tabela
@@ -90,17 +105,19 @@ tabela_1 # visualizando tabela
 # 2 - Numero de pessoas potencialmente isentas do IRPF em 2024
 
 tabela_2 <- svytotal(
-  ~renda_isencao,
+  x = ~renda_isencao, # desagregar por pessoas potencialmente isentas
   design = pnad_ocupados,
   na.rm = TRUE
 )
 
 tabela_2 # visualizando tabela
 
+confint(tabela_2) # incerteza em torno do valor médio obtido em 'tabela_2'
+
 # 3 - Proporcao de pessoas potencialemnte isentas do IRPF em 2024
 
 tabela_3 <- svymean(
-  ~renda_isencao,
+  x = ~renda_isencao,
   design = pnad_ocupados,
   na.rm = TRUE
 )
@@ -117,9 +134,9 @@ tabela_3 # visualizando tabela
 #  - A função utilizada para calcular a quantidade de interesse (svytotal, svymean, svyratio, svyquantile, …).
 
 tabela_4 <- svyby(
-  formula =~ VD4017,
-  by =~ renda_isencao,
-  FUN = svymean,
+  formula =~ VD4017, # variavel que eu tenho interesse de representar
+  by =~ renda_isencao, # grupo de interesse para a desagregação
+  FUN = svymean, # funcao de interesse relacionado à medida
   design = pnad_ocupados,
   na.rm = TRUE
 )
@@ -142,12 +159,16 @@ tabela_5 # visualizando tabela
 
 confint(tabela_5) # intervalo de confianca
 
-cv(object=tabela_5) * 100 # coeficiente de variacao
+# forma de calculo do cv: erro padrão / media - para interpretacao, ver slides 'dia 2'
 
+cv(object=tabela_5) * 100 # coeficiente de variacao
 
 # Extra! ------------------------------------------------------------------
 ###
-# Vamos plotar um mapa com essas estimativas
+#' Vamos plotar um mapa com essas estimativas
+#' ---
+#' Essa parte do código contém um estilo de programção diferente do que temos feito até o momento.
+#' Vamos usar a 'gramática' tidyverse, a qual inclui 'ggplot' para plotar os graficos
 ###
 
 # bibliotecas necessarias
