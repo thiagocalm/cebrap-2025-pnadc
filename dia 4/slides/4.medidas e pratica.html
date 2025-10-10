@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-10-09">
+<meta name="dcterms.date" content="2025-10-10">
 <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -208,7 +208,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">October 9, 2025</p>
+  <p class="date">October 10, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -326,13 +326,23 @@ Thiago Cordeiro Almeida
 </section><section id="tipos-de-medidas" class="slide level2 smaller"><h2><span class="theme-subtopic">Tipos de medidas</span></h2>
 <p>Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.</p>
 <ul>
-<li class="fragment"><p><strong>Números absolutos</strong> = <code>svytotal(~VARIAVEL)</code></p></li>
-<li class="fragment"><p><strong>Números relativos</strong> (distribuição relativa; composição) = <code>svymean(~VARIAVEL)</code></p></li>
-<li class="fragment"><p><strong>Proporção</strong> (numerador está contido no denominador) = <code>svymean(~VARIAVEL)</code></p></li>
-<li class="fragment"><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador) = <code>svyratio(~NUMERADOR, ~DENOMINADOR)</code></p></li>
-<li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer) = <code>svyratio(~NUMERADOR, ~DENOMINADOR)</code></p></li>
-<li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana) = <code>svymean(~NUMERADOR, ~DENOMINADOR)</code>, <code>svyquantile(~VARIAVEL, quantiles=~c(.5))</code></p></li>
-<li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação) = <code>confint(tabela)</code>, <code>cv(tabela)</code>, <code>SE(tabela)</code></p></li>
+<li class="fragment"><p><strong>Números absolutos</strong></p></li>
+<li class="fragment"><p><strong>Números relativos</strong> (distribuição relativa; composição)</p></li>
+<li class="fragment"><p><strong>Proporção</strong> (numerador está contido no denominador)</p></li>
+<li class="fragment"><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador)</p></li>
+<li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer)</p></li>
+<li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana)</p></li>
+<li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação)</p></li>
+</ul></section><section id="tipos-de-medidas-no-r-usando-plano-amostral" class="slide level2 font-size-small"><h2><span class="theme-subtopic">Tipos de medidas no R usando Plano Amostral</span></h2>
+<p><code>Em destaque abaixo</code>, há uma forma de implementação de cada medida em R.</p>
+<ul>
+<li><p><strong>Números absolutos</strong> = <code>svytotal(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Números relativos</strong> (distribuição relativa; composição) = <code>svymean(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Proporção</strong> (numerador está contido no denominador) = <code>svymean(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador) = <code>svyratio(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Razão</strong> (divisão de duas grandezas quaisquer) = <code>svyratio(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Medidas de tendência central</strong> (média, moda, mediana) = <code>svymean(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)</code>, <code>svyquantile(~VARIAVEL, quantiles=~c(.5), design = BASE_COM_PLANO_AMOSTRAL)</code></p></li>
+<li><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação) = <code>confint(tabela)</code>, <code>cv(tabela)</code>, <code>SE(tabela)</code></p></li>
 </ul></section><section id="tipos-de-análises" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
 <p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
 <div class="columns">
@@ -353,7 +363,7 @@ Thiago Cordeiro Almeida
 <p>Quanti X Quanti X Quati</p>
 </div></div>
 </section><section id="tipos-de-análises-1" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
-<p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
+<p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis<sup>1</sup>.</p>
 <div class="columns">
 <div class="column" style="width:30%;">
 <h3 style="text-align: center;" id="univariada-1">Univariada</h3>
@@ -402,7 +412,7 @@ Thiago Cordeiro Almeida
 </div>
 </div>
 </div></div>
-</section></section><section><section id="análise-prática-a-partir-de-um-caso-recente" class="title-slide slide level1 theme-first center"><h1>Análise prática a partir de um caso recente</h1>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Ver capítulo 10 do Livro “PNADC na prática”, na ementa do curso.</p></li></ol></aside></section></section><section><section id="análise-prática-a-partir-de-um-caso-recente" class="title-slide slide level1 theme-first center"><h1>Análise prática a partir de um caso recente</h1>
 <div style="text-align: left;">
 <p>Imposto de renda zero!</p>
 </div>
@@ -514,7 +524,9 @@ Thiago Cordeiro Almeida
 <li><p>Acumulado na entrevista: <code>interview</code>;</p></li>
 <li><p>Acumulado no trimestre: <code>quarter</code></p></li>
 <li><p>Suplemento acumulado no trimestre: <code>topic</code></p></li>
-</ul></section><section id="formas-de-importação-dos-dados-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
+</ul>
+<p>Lembrem-se que <strong>esses argumentos (quarter/interview/topic) são excludentes</strong> no pacote. Ou seja, deve-se escolher um deles.</p>
+</section><section id="formas-de-importação-dos-dados-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Formas de importação dos dados</span></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
 <p><strong>1. Importação de dados trimestrais:</strong></p>
@@ -603,17 +615,13 @@ Thiago Cordeiro Almeida
 <div class="column" style="width:40%;">
 <p>Abram o arquivo: <code>dia 4 &gt; praticas &gt; codigos &gt; Aula 4 - roteiro completo.R</code></p>
 </div><div class="column" style="width:60%;">
-<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
-<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
-</div>
+
 </div></div>
 </section></section><section><section id="pausa" class="title-slide slide level1 theme-stop center"><h1>Pausa!</h1>
-<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
-<img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;">
-</div>
+
 </section><section id="sobre-o-caso" class="slide level2 smaller"><h2><span class="theme-subtopic">Sobre o caso</span></h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/pratica_mapa.png" class="quarto-figure quarto-figure-center" style="width:80.0%;height:80.0%"></p>
+<figure><p><img data-src="images/pratica_mapa.png" class="quarto-figure quarto-figure-center" style="width:70.0%;height:70.0%"></p>
 </figure>
 </div>
 </section></section><section><section id="tópico-complementar" class="title-slide slide level1 theme-first center"><h1>Tópico complementar</h1>
@@ -680,13 +688,13 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Escolha do indivíduo a representar a característica do domicílio vai afetar os resultados obtidos.</p></li>
 </ul>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Fonte: Fundação João Pinheiro. <a href="https://fjp.mg.gov.br/deficit-habitacional-no-brasil/">Déficit Habitacional no Brasil</a>.</p></li></ol></aside></section><section id="o-peso-importa" class="slide level2 smaller"><h2><span class="theme-subtopic">O Peso importa</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Fonte: Fundação João Pinheiro. <a href="https://fjp.mg.gov.br/deficit-habitacional-no-brasil/">Déficit Habitacional no Brasil</a>.</p></li></ol></aside></section><section id="o-peso-importa" class="slide level2 smaller"><h2><span class="theme-subtopic">O Peso importa</span></h2>
 <p>Quais estratégias analíticas podemos recorrer?</p>
 <ul>
 <li class="fragment"><p><strong>Uso do responsavel do domicílio:</strong> usualmente feita<sup>1</sup>;</p></li>
 <li class="fragment"><p><strong>Uso de valor médio do domicílio:</strong> média da renda? idade média?</p></li>
 <li class="fragment"><p><strong>Economia de escala intradomiciliar:</strong> diferentes pessoas do domicílio “pesariam” de forma distinta para o valor do domicílio.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn3"><p>Ver <a href="https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0">Almeida et al.&nbsp;(2023)</a> para implicações desse uso</p></li></ol></aside></section></section><section><section id="próximos-passos" class="title-slide slide level1 theme-first center"><h1>Próximos passos</h1>
+</ul><aside><ol class="aside-footnotes"><li id="fn4"><p>Ver <a href="https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0">Almeida et al.&nbsp;(2023)</a> para implicações desse uso.</p></li></ol></aside></section></section><section><section id="próximos-passos" class="title-slide slide level1 theme-first center"><h1>Próximos passos</h1>
 <div style="text-align: left;">
 
 </div>

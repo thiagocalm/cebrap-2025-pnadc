@@ -3,12 +3,12 @@
 # PDF format --------------------------------------------------------------
 
 # path
-input_path = file.path(here::here(),"dia 2","slides")
+input_path = file.path(here::here(),"dia 4","slides")
 
-quarto::quarto_render(input = file.path(input_path,"2.pnadc no r.qmd"))
+quarto::quarto_render(input = file.path(input_path,"4.medidas e pratica.qmd"))
 
 pagedown::chrome_print(
-  file.path(input_path,"2.pnadc no r.html"),
+  file.path(input_path,"4.medidas e pratica.html"),
   options = list(
     printBackground = FALSE,
     preferCSSPageSize = FALSE,

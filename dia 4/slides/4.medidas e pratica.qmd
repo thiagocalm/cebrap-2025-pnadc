@@ -165,19 +165,41 @@ Valores são expressos em números, apresentam quantidades.
 
 Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.
 
--   **Números absolutos** = `svytotal(~VARIAVEL)`
+-   **Números absolutos**
 
--   **Números relativos** (distribuição relativa; composição) = `svymean(~VARIAVEL)` 
+-   **Números relativos** (distribuição relativa; composição)
 
--   **Proporção** (numerador está contido no denominador) = `svymean(~VARIAVEL)` 
+-   **Proporção** (numerador está contido no denominador)
 
--   **Taxa** (numerador **não** está contido no denominador) = `svyratio(~NUMERADOR, ~DENOMINADOR)`
+-   **Taxa** (numerador **não** está contido no denominador)
 
--   **Razão** (divisão de duas grandezas quaisquer) = `svyratio(~NUMERADOR, ~DENOMINADOR)`
+-   **Razão** (divisão de duas grandezas quaisquer)
 
--   **Medidas de tendência central** (média, moda, mediana) = `svymean(~NUMERADOR, ~DENOMINADOR)`, `svyquantile(~VARIAVEL, quantiles=~c(.5))`
+-   **Medidas de tendência central** (média, moda, mediana)
+
+-   **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação)
+
+## [Tipos de medidas no R usando Plano Amostral]{.theme-subtopic}{.font-size-small}
+
+::: nonincremental
+
+`Em destaque abaixo`, há uma forma de implementação de cada medida em R.
+
+-   **Números absolutos** = `svytotal(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)`
+
+-   **Números relativos** (distribuição relativa; composição) = `svymean(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)` 
+
+-   **Proporção** (numerador está contido no denominador) = `svymean(~VARIAVEL, design = BASE_COM_PLANO_AMOSTRAL)` 
+
+-   **Taxa** (numerador **não** está contido no denominador) = `svyratio(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)`
+
+-   **Razão** (divisão de duas grandezas quaisquer) = `svyratio(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)`
+
+-   **Medidas de tendência central** (média, moda, mediana) = `svymean(~NUMERADOR, ~DENOMINADOR, design = BASE_COM_PLANO_AMOSTRAL)`, `svyquantile(~VARIAVEL, quantiles=~c(.5), design = BASE_COM_PLANO_AMOSTRAL)`
 
 -   **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação) = `confint(tabela)`, `cv(tabela)`, `SE(tabela)`
+
+:::
 
 ## Tipos de análises {.theme-subtopic .smaller}
 
@@ -217,7 +239,7 @@ Quanti X Quanti X Quati
 
 ## Tipos de análises {.theme-subtopic .smaller}
 
-Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis^[Ver capítulo 10 do Livro "PNADC na prática", na ementa do curso.].
 
 :::::: columns
 ::: {.column width="30%"}
@@ -460,6 +482,8 @@ O que vai, basicamente variar é o argumento `quarter/interview/topic`.
 
 - Suplemento acumulado no trimestre: `topic`
 
+Lembrem-se que **esses argumentos (quarter/interview/topic) são excludentes** no pacote. Ou seja, deve-se escolher um deles.
+
 :::
 
 ## [Formas de importação dos dados]{.theme-subtopic} {.smaller}
@@ -588,7 +612,7 @@ Abram o arquivo: `dia 4 > praticas > codigos > Aula 4 - roteiro completo.R`
 
 ## [Sobre o caso]{.theme-subtopic} {.smaller}
 
-![](images/pratica_mapa.png){fig-align="center" width="80%" height="80%"}
+![](images/pratica_mapa.png){fig-align="center" width="70%" height="70%"}
 
 # Tópico complementar {.theme-first}
 
@@ -686,7 +710,7 @@ Peso a se utilizar para o domicílio
 
 Quais estratégias analíticas podemos recorrer?
 
-- **Uso do responsavel do domicílio:** usualmente feita^[Ver [Almeida et al. (2023)](https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0) para implicações desse uso];
+- **Uso do responsavel do domicílio:** usualmente feita^[Ver [Almeida et al. (2023)](https://repositorio.ufmg.br/items/7ed1820e-3d0b-4a20-baee-8d77cb79bec0) para implicações desse uso.];
 
 - **Uso de valor médio do domicílio:** média da renda? idade média?
 
